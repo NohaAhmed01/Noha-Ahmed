@@ -54,6 +54,7 @@ header .brandFunction{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 80px;
 }
 header .brandFunction .words{
     display: flex;
@@ -68,6 +69,7 @@ header .brandFunction .words .title{
 header .brandFunction .words p{
     font-weight: 400;
     font-size: 20px;
+    padding-bottom: 20px;
 }
 header .brandFunction .words button{
   font-weight: 400;
