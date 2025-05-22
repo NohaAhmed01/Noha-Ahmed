@@ -53,6 +53,7 @@ header .nav button:hover::before {
 }
 header .nav button:hover {
   color: white;
+  border: #000 1px solid;
 }
 header i {
   font-weight: lighter;
@@ -120,6 +121,8 @@ header .brandFunction .words button:hover::after{
 }
 header .brandFunction .words button:hover{
     color: #000;
+    border: #fff544 1px solid;
+
 }
 header .brandFunction .images {
   width: 2000px;
