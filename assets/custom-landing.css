@@ -43,5 +43,6 @@ header .nav button span{
 }
 
 header .bg-img{
-    
+    height: 200px;
+    width: 100%;
 }

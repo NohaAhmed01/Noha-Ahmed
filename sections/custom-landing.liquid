@@ -1,12 +1,14 @@
 <header>
-    <div class="nav">
-        <p class="brandName">Tisso Vison</p>
-        <p class="brandDescription">Find the ideal gift for your loved ones.</p>
-        <button>CHOOSE GIFT <span></span></button>
-    </div>
-    <div class="bg-img" style="background-image: url('{{ 'bg-img.png' | asset_url }}')"></div>
-
+  <div class="nav">
+    <p class="brandName">Tisso Vison</p>
+    <p class="brandDescription">Find the ideal gift for your loved ones.</p>
+    <button>CHOOSE GIFT <span></span></button>
+  </div>
+  <div
+    class="bg-img"
+    style="background-image: url({{ 'bg-img.png' | asset_url }});"
+  ></div>
 </header>
 
-{{ 'custom-landing.css' | asset_url | stylesheet_tag }}
+{{ "custom-landing.css" | asset_url | stylesheet_tag }}
 <script src="{{ 'custom-landing.js' | asset_url }}"></script>
