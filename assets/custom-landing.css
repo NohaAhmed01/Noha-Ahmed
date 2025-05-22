@@ -48,6 +48,5 @@ header .bg-img {
   background-size: cover;
   background-position: center;
   display: block;
-  position: relative;
-  top: 64px;
+
 }
