@@ -8,5 +8,5 @@ header .nav{
     height: 64px;
     padding: 10px 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
