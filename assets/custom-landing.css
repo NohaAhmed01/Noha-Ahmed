@@ -77,3 +77,12 @@ header .brandFunction .words button{
   background-color: black;
   color:#fff;
 }
+header .brandFunction .images{
+    width: 890px;
+    height: 402px;
+}
+header .brandFunction .images img{
+    width: 100%;
+    height: 100%;
+}
+
