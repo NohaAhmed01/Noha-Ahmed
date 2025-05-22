@@ -32,7 +32,10 @@ header .nav button {
   background-color: #fff544;
   border-color: #fff544;
 }
-
+header .fa-arrow-right-long{
+  font-weight: lighter;
+  font-size: larger;
+}
 
 header .bg-img {
   height: 390px;
