@@ -33,7 +33,7 @@ header .nav button {
   background-color: #fff544;
   border: #fff544 1px solid;
   transition: color 0.5s linear;
-  
+  z-index: 0;
 }
 header .nav button::before {
   content: "";
@@ -99,6 +99,8 @@ header .brandFunction .words button {
   transition: color 0.5s linear;
   position: relative;
   overflow: hidden;
+  z-index: 0;
+
 }
 header .brandFunction .words button::after {
   content: "";
