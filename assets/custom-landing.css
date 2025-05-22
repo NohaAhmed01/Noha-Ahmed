@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header{
+  display: block;
+}
+header nav {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 64px;
+}
+header .one {
+  /* position: absolute;
+  top: 64px; */
+  height: 390px;
+  width: 100%;
+  background-image: url("../Frame\ \(1\).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+header .two {
+  display: flex;
+  justify-content: space-between;
+  /* position: relative;
+  top: 400px; */
+}
+
+header .two img {
+  height: 402px;
+  width: 890px;
+}
+header .two div {
+  margin: 40px;
+  font-family: "Jost", sans-serif;
+  font-size: 70px;
+  font-weight: 500;
+}
+header .headerEnd {
+  /* position: relative;
+  top: 400px; */
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #f5f5f5;
+  text-align: center;
+      /* top right bottom left */
+  padding: 10px 50px;
+}
+.products{
+      /* top right bottom left */
+  margin: 90px 90px 40px 90px;
+}
+.products .title{
+  font-family: "Lustria", serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.products .productsGrid{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.products .productsGrid img{
+  padding-bottom: 20px;
+  width: 433px;
+  height: 444px;
+  
+}
+.productsGrid div{
+  background-color: #f5f5f5;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%; 
+
+}
+.productsGrid div:hover{
+  cursor:pointer;
+}
+.productsGrid .eins{
+  position: absolute;
+  top: 1278px;
+  left: 356.5px;
+  z-index: 55;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+.productsGrid .zwei{
+  position: absolute;
+  top: 1310px;
+  left: 880px;
+  z-index: 55;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+.productsGrid .drei{
+  position: absolute;
+  top: 1178px;
+  left: 1356.5px;
+  z-index: 55;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+.productsGrid .vier{
+  position: absolute;
+  top: 1678px;
+  left: 256.5px;
+  z-index: 55;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+.productsGrid .funf{
+  position: absolute;
+  top: 1778px;
+  left: 756.5px;
+  z-index: 55;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+.productsGrid .sechs{
+  position: absolute;
+  top: 1878px;
+  left: 1120.5px;
+  z-index: 55;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
