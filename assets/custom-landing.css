@@ -8,5 +8,11 @@ header .nav{
     height: 64px;
     padding: 10px 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+header .nav .brandName{
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: large;
+      font-family: "Jost", sans-serif;
 }
