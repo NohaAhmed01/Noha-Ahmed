@@ -29,11 +29,11 @@ header .nav button {
   text-transform: uppercase;
   width: 207px;
   height: 44px;
-  background-color: #fff544;
-  border-color: #fff544;
-  transition: color 0.5s linear;
   position: relative;
-  overflow: hidden;
+  background-color: #fff544;
+  border: #fff544 1px solid;
+  transition: color 0.5s linear;
+  
 }
 header .nav button::before {
   content: "";
