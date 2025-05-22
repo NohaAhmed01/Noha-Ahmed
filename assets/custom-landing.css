@@ -31,7 +31,29 @@ header .nav button {
   height: 44px;
   background-color: #fff544;
   border-color: #fff544;
+
+   &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+  }
+  &:before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    background-color: darken(#fff544, 15%);
+    transition: all .3s;
+  }
+  &:hover {
+    color: #000;
+    &:before {
+      width: 100%;
+    }
+  }
+
 }
+
 header i{
   font-weight: lighter;
   font-size: larger;
