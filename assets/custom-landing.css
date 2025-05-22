@@ -32,7 +32,7 @@ header .nav button {
   background-color: #fff544;
   border-color: #fff544;
 }
-header .fa-arrow-right-long{
+header i{
   font-weight: lighter;
   font-size: larger;
 }
