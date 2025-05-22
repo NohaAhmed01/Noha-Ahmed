@@ -50,3 +50,31 @@ header .bg-img {
   display: block;
 
 }
+header .brandFunction{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .brandFunction .words{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: "Jost", sans-serif;
+}
+header .brandFunction .words .title{  
+    font-weight: 500;
+    font-size: 70px;
+}
+header .brandFunction .words p{
+    font-weight: 400;
+    font-size: 20px;
+}
+header .brandFunction .words button{
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 220px;
+  height: 50px;
+  background-color: black;
+  color:#fff;
+}
