@@ -148,8 +148,6 @@ header .header-end p{
 .grid{
     margin: 50px 90px;
     width: 100%;
-    position: relative;
-    overflow: hidden;
 }
 .grid #grid-Title{
     font-family: "Lustria", sans-serif;
@@ -170,6 +168,7 @@ header .header-end p{
     width: 433px;
     height: 444px;
     margin-bottom: 20px;
+    position: relative;
 }
 .grid .row .col img{
     width: 100%;
