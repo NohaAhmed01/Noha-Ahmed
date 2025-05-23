@@ -16,30 +16,30 @@ document.addEventListener("DOMContentLoaded", async () => {
     )
     .join("");
   container.innerHTML = content;
-  document.querySelectorAll(".clickable").forEach((el) => {
-  el.addEventListener("click", () => {
-    const upperGrid= data.products
-    .slice(0, 6)
-    .map(
-      (product) =>
-        `   
-      <div class="card">
-        <div class="top-card">
-          <img
-            src="${product.images[0].src}"
-            alt="${product.title}"
-          />
-          <div class="top-right">
-            <span>${product.title}</span>
-            <span>${product.price}</span>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, unde.</p>
-          </div>
-        </div>
-      </div>
-    `
-    )
-    .join("");
-    document.querySelectorAll(".product-details").innerHTML = upperGrid;
-  });
-});
+//   document.querySelectorAll(".clickable").forEach((el) => {
+//   el.addEventListener("click", () => {
+//     const upperGrid= data.products
+//     .slice(0, 6)
+//     .map(
+//       (product) =>
+//         `   
+//       <div class="card">
+//         <div class="top-card">
+//           <img
+//             src="${product.images[0].src}"
+//             alt="${product.title}"
+//           />
+//           <div class="top-right">
+//             <span>${product.title}</span>
+//             <span>${product.price}</span>
+//             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, unde.</p>
+//           </div>
+//         </div>
+//       </div>
+//     `
+//     )
+//     .join("");
+//     document.querySelectorAll(".product-details").innerHTML = upperGrid;
+//   });
+// });
 });
