@@ -163,12 +163,12 @@ header .header-end p{
     align-items: center;
     width: 1339px;
     flex-wrap: wrap;
+    position: relative;
 }
 .grid .row .col{
     width: 433px;
     height: 444px;
     margin-bottom: 20px;
-    position: relative;
 }
 .grid .row .col img{
     width: 100%;
