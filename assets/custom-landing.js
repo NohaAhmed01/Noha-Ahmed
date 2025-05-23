@@ -8,14 +8,17 @@ document.addEventListener("DOMContentLoaded", async () => {
     .map(
       (product) =>
         `<div class="col">
-        <img src = "${product.images[0].src}" alt="${product.title}"/>
-        <div id="clickable${i++}">+</div>
+          <div class="img-wrapper">
+           <img src="${product.images[0].src}" alt="${product.title}" />
+           <div class="clickable" id="clickable${i}">+</div>
+          </div>
         </div>`
     )
     .join("");
   container.innerHTML = content;
-  const clickable = document.getElementById("clickable0");
-  clickable.addEventListener("click", function () {
-    alert("hello world");
+  document.querySelectorAll(".clickable").forEach((el) => {
+  el.addEventListener("click", () => {
+    alert("Hello world");
   });
+});
 });

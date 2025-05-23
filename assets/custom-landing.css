@@ -99,7 +99,7 @@ header .brandFunction .words button {
   background-color: black;
   color: #fff;
   transition: color 0.5s linear;
-  position: relative; 
+  position: relative;
   z-index: 0;
   overflow: hidden;
 }
@@ -114,15 +114,13 @@ header .brandFunction .words button::after {
   transform: translateX(100%);
   transition: transform 0.5s linear;
   z-index: -1;
-
 }
-header .brandFunction .words button:hover::after{
-    transform: translateX(0);
+header .brandFunction .words button:hover::after {
+  transform: translateX(0);
 }
-header .brandFunction .words button:hover{
-    color: #000;
-    border: #fff544 1px solid;
-
+header .brandFunction .words button:hover {
+  color: #000;
+  border: #fff544 1px solid;
 }
 header .brandFunction .images {
   width: 2600px;
@@ -132,135 +130,160 @@ header .brandFunction .images img {
   width: 100%;
   height: 100%;
 }
-header .header-end{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f5f5;
-    width: 100%;
-    height: 34px;
+header .header-end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 34px;
 }
-header .header-end p{
-    font-family: "Jost", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
+header .header-end p {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
-.grid{
-    margin: 50px 90px;
-    width: 100%;
+.grid {
+  margin: 50px 90px;
+  width: 100%;
+  position: relative;
 }
-.grid #grid-Title{
-    font-family: "Lustria", sans-serif;
-    font-weight: 400;
-    font-size: 36px;
-    color: #000;
-    padding: 10px 0px;
+.grid #grid-Title {
+  font-family: "Lustria", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: #000;
+  padding: 10px 0px;
 }
-.grid .row{
-    display: block;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    width: 1339px;
-    flex-wrap: wrap;
-    position: relative;
+.grid .row {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1339px;
+  flex-wrap: wrap;
 }
-.grid .row .col{
-    width: 433px;
-    height: 444px;
-    margin-bottom: 20px;
+.grid .row .col {
+  width: 433px;
+  height: 444px;
+  margin-bottom: 20px;
+  position: relative;
 }
-.grid .row .col img{
-    width: 100%;
-    height: 100%;
+.grid .row .col .img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-.grid #clickable0{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(248, 248, 248,0.9);
-    border-radius: 50%;
-    color: #000;
-    font-weight: bold;
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    top: 338px;
-    left: 256.5px;
-    z-index: 55;
+.grid .row .col img {
+  width: 100%;
+  height: 100%;
 }
-.grid #clickable1{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(248, 248, 248,0.9);
-    border-radius: 50%;
-    color: #000;
-    font-weight: bold;
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    top: 322px;
-    left: 808.5px;
-    z-index: 55;
+
+.grid .clickable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(248, 248, 248, 0.9);
+  border-radius: 50%;
+  color: #000;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  bottom: 10px; /* or top: 10px; */
+  right: 10px;
+  z-index: 55;
 }
-.grid #clickable2{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(248, 248, 248,0.9);
-    border-radius: 50%;
-    color: #000;
-    font-weight: bold;
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    top: 182px;
-    left: 1167px;
-    z-index: 55;
+
+
+
+/* .grid #clickable0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(248, 248, 248, 0.9);
+  border-radius: 50%;
+  color: #000;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 338px;
+  left: 256.5px;
+  z-index: 55;
 }
-.grid #clickable3{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(248, 248, 248,0.9);
-    border-radius: 50%;
-    color: #000;
-    font-weight: bold;
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    top: 635px;
-    left: 301.5px;
-    z-index: 55;
+.grid #clickable1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(248, 248, 248, 0.9);
+  border-radius: 50%;
+  color: #000;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 322px;
+  left: 808.5px;
+  z-index: 55;
 }
-.grid #clickable4{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(248, 248, 248,0.9);
-    border-radius: 50%;
-    color: #000;
-    font-weight: bold;
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    top: 668px;
-    left: 665.5px;
-    z-index: 55;
+.grid #clickable2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(248, 248, 248, 0.9);
+  border-radius: 50%;
+  color: #000;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 182px;
+  left: 1167px;
+  z-index: 55;
 }
-.grid #clickable5{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(248, 248, 248,0.9);
-    border-radius: 50%;
-    color: #000;
-    font-weight: bold;
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    top: 728px;
-    left: 1225.5px;
-    z-index: 55;
+.grid #clickable3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(248, 248, 248, 0.9);
+  border-radius: 50%;
+  color: #000;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 635px;
+  left: 301.5px;
+  z-index: 55;
 }
+.grid #clickable4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(248, 248, 248, 0.9);
+  border-radius: 50%;
+  color: #000;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 668px;
+  left: 665.5px;
+  z-index: 55;
+}
+.grid #clickable5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(248, 248, 248, 0.9);
+  border-radius: 50%;
+  color: #000;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 728px;
+  left: 1225.5px;
+  z-index: 55;
+} */
