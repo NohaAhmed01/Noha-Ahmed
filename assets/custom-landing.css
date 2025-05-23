@@ -235,7 +235,7 @@ header .header-end p {
 } */
 
 .grey-bg{
-  background-color: rgba(245, 245, 245, 0.3);
+  background-color: rgba(245, 245, 245, 0.7);
   position: fixed;
   inset: 0;
   z-index: 9;
@@ -250,7 +250,7 @@ header .header-end p {
   border: black 2px solid;
   background-color: white;
   z-index: 10;
-  
+  display: none;
 }
 .product-details .card{
   margin: 20px 10px;
