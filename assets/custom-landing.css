@@ -173,7 +173,7 @@ header .header-end p{
     width: 100%;
     height: 100%;
 }
-.grid .clickable{ 
+.grid #clickable1{ 
     display: flex;
     justify-content: center;
     align-items: center;

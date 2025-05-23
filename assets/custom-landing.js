@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       (product) =>
         `<div class="col">
         <img src = "${product.images[0].src}" alt="${product.title}"/>
-        <div class="clickable">+</div>
+        <div id="clickable${product.id}">+</div>
         </div>`
     )
     .join("");
