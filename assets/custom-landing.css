@@ -239,7 +239,7 @@ header .header-end p {
   position: fixed;
   inset: 0;
   z-index: 9;
-  display: none;
+ 
 }
 .product-details{
   position: fixed;
@@ -250,7 +250,7 @@ header .header-end p {
   border: black 2px solid;
   background-color: white;
   z-index: 10;
-  display: none;
+  
 }
 .product-details .card{
   margin: 20px 10px;

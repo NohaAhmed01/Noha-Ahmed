@@ -18,8 +18,28 @@ document.addEventListener("DOMContentLoaded", async () => {
   container.innerHTML = content;
   document.querySelectorAll(".clickable").forEach((el) => {
   el.addEventListener("click", () => {
-    const upperGrid= content[0];
-    alert(upperGrid);
+    const upperGrid= data.products
+    .slice(0, 6)
+    .map(
+      (product) =>
+        `   
+      <div class="card">
+        <div class="top-card">
+          <img
+            src=""
+            alt=""
+          />
+          <div class="top-right">
+            <span>Green trench coat</span>
+            <span>980.00$</span>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, unde.</p>
+          </div>
+        </div>
+      </div>
+    `
+    )
+    .join("");
+    document.querySelectorAll(".product-details").innerHTML = upperGrid;
   });
 });
 });
