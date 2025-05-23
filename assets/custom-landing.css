@@ -152,7 +152,7 @@ header .header-end p{
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 250px;
+   
     flex-wrap: wrap;
 }
 .grid .row .col{
