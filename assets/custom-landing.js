@@ -15,3 +15,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     .join("");
     container.innerHTML = content;
 });
+const clickable = document.getElementById("clickable0");
+clickable.addEventListener("click",function (){
+  alert("hello world");
+}) 
