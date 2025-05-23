@@ -177,4 +177,6 @@ header .header-end p{
     border-radius: 50%;
     color: #000;
     font-weight: bold;
+    width: 22px;
+    height: 22px;
 }
