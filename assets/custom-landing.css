@@ -149,8 +149,13 @@ header .header-end p{
 
 .grid .row{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 250px;
+    flex-wrap: wrap;
+}
+.grid .row .col{
+    width: 443px;
+    height: 444px;
 }
