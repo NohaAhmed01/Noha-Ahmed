@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     .join("");
   container.innerHTML = content;
   document.querySelectorAll(".clickable").forEach((el) => {
-    el.addEventListener("click", () => {alert(data.products[i++])});
+    el.addEventListener("click", () => {console.log(data.products);
+    });
   });
 });
