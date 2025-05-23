@@ -1,7 +1,7 @@
-// document.addEventListener("DOMContentLoaded", async () => {
-//   const container = document.getElementById("custom-products");
-//   const response = await fetch("/products.json");
-//   const data = await response.json();
+document.addEventListener("DOMContentLoaded", async () => {
+  const container = document.getElementsByClassName("row")[0];
+  const response = await fetch("/products.json");
+  const data = await response.json();
 
 //   const html = data.products.map(product => `
 //     <div class="product-card">
