@@ -148,6 +148,7 @@ header .header-end p{
 .grid{
     display: block;
     margin: 50px;
+    width: 80%;
 }
 .grid #grid-Title{
     font-family: "Jost", sans-serif;
@@ -164,6 +165,7 @@ header .header-end p{
 .grid .row .col{
     width: 433px;
     height: 444px;
+    margin-bottom: 20px;
 }
 .grid .row .col img{
     width: 100%;
