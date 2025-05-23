@@ -149,6 +149,7 @@ header .header-end p{
     margin: 50px 90px;
     width: 100%;
     position: relative;
+    overflow: hidden;
 }
 .grid #grid-Title{
     font-family: "Lustria", sans-serif;
