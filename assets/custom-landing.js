@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         </div>`
     )
     .join("");
-    container.innerHTML = content;
+  container.innerHTML = content;
+  const clickable = document.getElementById("clickable0");
+  clickable.addEventListener("click", function () {
+    alert("hello world");
+  });
 });
-const clickable = document.getElementById("clickable0");
-clickable.addEventListener("click",function (){
-  alert("hello world");
-}) 
