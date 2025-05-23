@@ -147,6 +147,7 @@ header .header-end p{
 }
 .grid{
     margin: 50px;
+    width: 100%;
 }
 .grid #grid-Title{
     font-family: "Lustria", sans-serif;
@@ -158,6 +159,7 @@ header .header-end p{
 .grid .prod-container{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 .grid .row{
     display: flex;
