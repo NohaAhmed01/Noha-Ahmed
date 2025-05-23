@@ -146,10 +146,18 @@ header .header-end p{
     font-size: 16px;
 }
 .grid{
-    gap: 30px;
+    display: block;
+    margin: 50px;
 }
 .grid #grid-Title{
     font-family: "Jost", sans-serif;
     font-weight: 400;
     font-size: 36px;
+}
+.grid .row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
 }
