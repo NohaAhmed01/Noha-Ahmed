@@ -196,95 +196,76 @@ header .header-end p {
   z-index: 55;
 }
 
-
-
+/* if we want custom placement of clickable circular buttons */
 /* .grid #clickable0 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(248, 248, 248, 0.9);
-  border-radius: 50%;
-  color: #000;
-  font-weight: bold;
-  width: 22px;
-  height: 22px;
   position: absolute;
   top: 338px;
   left: 256.5px;
   z-index: 55;
 }
 .grid #clickable1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(248, 248, 248, 0.9);
-  border-radius: 50%;
-  color: #000;
-  font-weight: bold;
-  width: 22px;
-  height: 22px;
   position: absolute;
   top: 322px;
   left: 808.5px;
   z-index: 55;
 }
-.grid #clickable2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(248, 248, 248, 0.9);
-  border-radius: 50%;
-  color: #000;
-  font-weight: bold;
-  width: 22px;
-  height: 22px;
+.grid #clickable2 {;
   position: absolute;
   top: 182px;
   left: 1167px;
   z-index: 55;
 }
 .grid #clickable3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(248, 248, 248, 0.9);
-  border-radius: 50%;
-  color: #000;
-  font-weight: bold;
-  width: 22px;
-  height: 22px;
   position: absolute;
   top: 635px;
   left: 301.5px;
   z-index: 55;
 }
 .grid #clickable4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(248, 248, 248, 0.9);
-  border-radius: 50%;
-  color: #000;
-  font-weight: bold;
-  width: 22px;
-  height: 22px;
   position: absolute;
   top: 668px;
   left: 665.5px;
   z-index: 55;
 }
 .grid #clickable5 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(248, 248, 248, 0.9);
-  border-radius: 50%;
-  color: #000;
-  font-weight: bold;
-  width: 22px;
-  height: 22px;
   position: absolute;
   top: 728px;
   left: 1225.5px;
   z-index: 55;
 } */
+
+.grey-bg{
+  background-color: rgba(245, 245, 245, 0.3);
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  display: none;
+}
+.product-details{
+  position: fixed;
+  top: 20%;
+  left: 35%;
+  width: 350px;
+  height: 400px;
+  border: black 2px solid;
+  background-color: white;
+  z-index: 10;
+  display: none;
+}
+.product-details .card{
+  margin: 20px 10px;
+}
+.product-details .card .top-card{
+  display: flex;
+  justify-content: space-between;
+}
+.product-details .card .top-card img{
+  padding: 0 10px 10px;
+  width: 40%;
+  height: 200px;
+}
+.product-details .card .top-card .top-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

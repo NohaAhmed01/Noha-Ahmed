@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   container.innerHTML = content;
   document.querySelectorAll(".clickable").forEach((el) => {
   el.addEventListener("click", () => {
-    alert("Hello world");
+    const upperGrid= content[0];
+    alert(upperGrid);
   });
 });
 });
