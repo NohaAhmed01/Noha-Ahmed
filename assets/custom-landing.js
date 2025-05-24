@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       card.innerHTML=`
         <div class="top-card">
           <img
-            src="${data.products[el].images[0].src}"
+            src="${data.products[i].images[0].src}"
             alt="{data.products[i++].title}"
           />
           <div class="top-right">
