@@ -17,13 +17,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     .join("");
   container.innerHTML = content;
   const card = document.querySelector(".card");
-  document.querySelectorAll(".clickable").forEach((el) => {
+  document.querySelectorAll(".clickable").forEach((el, index) => {
     el.addEventListener("click", () => {
       console.log(data.products.slice(0, 6));
+
+      const product = data.products[index];
       card.innerHTML=`
         <div class="top-card">
           <img
-            src="${data.products[i].images[0].src}"
+            src="${product.images[0].src}"
             alt="{data.products[i++].title}"
           />
           <div class="top-right">
