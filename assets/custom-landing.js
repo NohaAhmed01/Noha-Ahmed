@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       const product = data.products[index];
       card.innerHTML=`
-        <div class="top-card">
         <i class="fa-solid fa-xmark"></i>
+        <div class="top-card">
           <img
             src="${product.images[0].src}"
             alt="${product.title}"
