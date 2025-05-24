@@ -147,7 +147,6 @@ header .header-end p {
 .grid {
   padding: 50px 90px;
   width: 100%;
-
 }
 .grid #grid-Title {
   font-family: "Lustria", sans-serif;
@@ -234,14 +233,13 @@ header .header-end p {
   z-index: 55;
 } */
 
-.grey-bg{
+.grey-bg {
   background-color: rgba(178, 178, 178, 0.2);
   position: fixed;
   inset: 0;
   z-index: 9;
- 
 }
-.product-details{
+.product-details {
   position: fixed;
   top: 20%;
   left: 35%;
@@ -251,44 +249,45 @@ header .header-end p {
   z-index: 10;
   display: none;
 }
-.product-details .card{
+.product-details .card {
   margin: 10px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
 }
-.product-details .fa-xmark{
-    font-size: 18px;
+.product-details .fa-xmark {
+  font-size: 18px;
 }
-.product-details .card .top-card{
+.product-details .card .top-card {
+  height: 40%;
   display: flex;
   justify-content: space-between;
 }
-.product-details .card .top-card img{
+.product-details .card .top-card img {
   padding: 0 10px 10px;
-  width: 40%; 
-  height: 175px;
+  width: 50%;
+  height: 100%;
 }
-.product-details .card .top-card .top-right{
+.product-details .card .top-card .top-right {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.product-details .card .top-card .top-right .prod-title{
+.product-details .card .top-card .top-right .prod-title {
   font-family: "Jost", sans-serif;
   font-weight: 300;
   font-size: 160px;
 }
-.product-details .card .top-card .top-right .prod-price{
-      font-family: "Lustria", sans-serif;
-      font-weight: 400;
-      font-size: 16px;
+.product-details .card .top-card .top-right .prod-price {
+  font-family: "Lustria", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
-.product-details .card .top-card .top-right p{
-    width: 146px;
-    height: 60px;
-    font-family: "Jost", sans-serif;
-    font-weight: 300;
-    font-size: 14px;
+.product-details .card .top-card .top-right p {
+  width: 146px;
+  height: 60px;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
 }
