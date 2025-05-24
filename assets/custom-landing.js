@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       `;
       document.querySelector(".product-details").style.display="block";
       document.querySelector(".grey-bg").style.display="block";
+      document.body.style.overflow="hidden";
     });
   });
 });
