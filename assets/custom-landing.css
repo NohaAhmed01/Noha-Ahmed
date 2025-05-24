@@ -245,15 +245,16 @@ header .header-end p {
   position: fixed;
   top: 20%;
   left: 35%;
-  width: 350px;
-  height: 400px;
-  border: black 2px solid;
+  width: 311px;
+  height: 447px;
   background-color: white;
   z-index: 10;
   display: none;
 }
 .product-details .card{
   margin: 20px 10px;
+  display: flex;
+  flex-direction: column;
 }
 .product-details .card .top-card{
   display: flex;
