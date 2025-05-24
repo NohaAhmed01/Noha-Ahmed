@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             alt="${product.title}"
           />
           <div class="top-right">
-            <span>${product.title}</span>
-            <span>${product.variants[0].price} $</span>
+            <span id="prod-title">${product.title}</span>
+            <span id="prod-price">${product.variants[0].price} €</span>
             ${product.body_html}
           </div>
         </div>

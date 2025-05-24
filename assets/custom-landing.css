@@ -235,7 +235,7 @@ header .header-end p {
 } */
 
 .grey-bg{
-  background-color: rgba(245, 245, 245, 0.2);
+  background-color: rgba(178, 178, 178, 0.2);
   position: fixed;
   inset: 0;
   z-index: 9;
@@ -252,19 +252,14 @@ header .header-end p {
   display: none;
 }
 .product-details .card{
-  margin: 20px 10px;
+  margin: 10px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
-  /* position: relative; */
 }
 .product-details .fa-xmark{
-    /* position: absolute;
-    top: 10px;
-    right: 10px; */
-    font-size: 12px;
-    padding-bottom:40px ;
+    font-size: 18px;
 }
 .product-details .card .top-card{
   display: flex;
@@ -272,11 +267,30 @@ header .header-end p {
 }
 .product-details .card .top-card img{
   padding: 0 10px 10px;
-  width: 40%;
-  height: 200px;
+  /* width: 40%; */
+  /* height: 200px; */
+  width: 120px;
+  height: 140px;
 }
 .product-details .card .top-card .top-right{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+.product-details .card .top-card .top-right .prod-title{
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 160px;
+}
+.product-details .card .top-card .top-right .prod-price{
+      font-family: "Lustria", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+}
+.product-details .card .top-card .top-right p{
+    width: 146px;
+    height: 60px;
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
 }
