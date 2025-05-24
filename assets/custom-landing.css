@@ -288,7 +288,7 @@ header .header-end p {
 }
 .product-details .card .top-card .top-right p {
   width: 146px;
-  height: 60px;
+  height: fit-content;
   font-family: "Jost", sans-serif;
   font-weight: 300;
   font-size: 14px;
