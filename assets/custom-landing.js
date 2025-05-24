@@ -26,12 +26,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         <div class="top-card">
           <img
             src="${product.images[0].src}"
-            alt="{data.products[i++].title}"
+            alt="${product.title}"
           />
           <div class="top-right">
-            <span>{data.products[i++].title}</span>
-            <span>price to add</span>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, unde.</p>
+            <span>${product.title}</span>
+            <span>${product.variants[0].price} $</span>
+            ${product.body_html}
           </div>
         </div>
       `;
