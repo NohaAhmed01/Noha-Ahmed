@@ -19,10 +19,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   const card = document.querySelector(".card");
   document.querySelectorAll(".clickable").forEach((el) => {
     el.addEventListener("click", () => {
+      console.log(content);
       card.innerHTML=`
         <div class="top-card">
           <img
-            src="${data.products[i++].images[0].src}"
+            src="${data.products[el].images[0].src}"
             alt="{data.products[i++].title}"
           />
           <div class="top-right">
