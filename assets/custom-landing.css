@@ -260,7 +260,7 @@ header .header-end p {
   font-size: 18px;
 }
 .product-details .card .top-card {
-  height: 40%;
+
   display: flex;
   justify-content: space-between;
 }

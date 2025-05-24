@@ -1,3 +1,4 @@
+//products grid display
 document.addEventListener("DOMContentLoaded", async () => {
   const container = document.getElementsByClassName("row")[0];
   const response = await fetch("/products.json");
@@ -16,6 +17,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     )
     .join("");
   container.innerHTML = content;
+
+  //grid layover creation
   const card = document.querySelector(".card");
   document.querySelectorAll(".clickable").forEach((el, index) => {
     el.addEventListener("click", () => {
@@ -38,9 +41,16 @@ document.addEventListener("DOMContentLoaded", async () => {
           </div>
         </div>
       `;
+      document.querySelector(".fa-xmark").addEventListener("click",close);
       document.querySelector(".product-details").style.display="block";
       document.querySelector(".grey-bg").style.display="block";
       document.body.style.overflow="hidden";
     });
   });
+
+  function close(){
+     document.querySelector(".product-details").style.display="none";
+      document.querySelector(".grey-bg").style.display="none";
+      document.body.style.overflow="auto";
+  }
 });
