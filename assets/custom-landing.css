@@ -260,7 +260,8 @@ header .header-end p {
   font-size: 18px;
 }
 .product-details .card .top-card {
-
+  height: 210px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -273,6 +274,7 @@ header .header-end p {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  overflow: hidden;
 }
 .product-details .card .top-card .top-right .prod-title {
   font-family: "Jost", sans-serif;
