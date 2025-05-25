@@ -22,13 +22,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   container.innerHTML = content;
 
   //grid layover creation
-  const card = document.querySelector(".top");
+  const tcard = document.querySelector(".top");
+  const bcard = document.querySelector(".bottom");
   document.querySelectorAll(".clickable").forEach((el, index) => {
     el.addEventListener("click", () => {
       console.log(data.products.slice(0, 6));
 
       const product = data.products[index];
-      card.innerHTML = `
+      tcard.innerHTML = `
         <div class="close">
       <i class="fa-solid fa-xmark"></i>
     </div>
@@ -54,27 +55,12 @@ document.addEventListener("DOMContentLoaded", async () => {
           ${product.options[1].values[1]}
         </button>
       </div>
+      `
 
-      <div class="sizes">Size</div>
-
-      <div class="custom-dropdown">
-        <div class="selected">
-          <span class="placeholder">Choose your size</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <ul class="dropdown-options">
-          <li>${product.options[0].values[0]}</li>
-          <li>${product.options[0].values[1]}</li>
-          <li>${product.options[0].values[2]}</li>
-          <li>${product.options[0].values[3]}</li>
-        </ul>
-      </div>
-    </div>
-
-     <div class="bottom-card">
+      bcard.innerHTML=`<div class="bottom-card">
         <button><span>ADD TO CART</span><i class="fa-solid fa-arrow-right-long"></i></button>
-     </div>
-      `;
+     </div>`;
+     
       document.querySelector(".fa-xmark").addEventListener("click", close);
       document.querySelector(".product-details").style.display = "block";
       document.querySelector(".grey-bg").style.display = "block";
