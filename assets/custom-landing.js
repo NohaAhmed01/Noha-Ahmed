@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const response = await fetch("/products.json");
   const data = await response.json();
   let i = 0;
+  // const colorBtns = document.querySelectorAll(".cbtn");
+  
   //grid creation
   const content = data.products
     .slice(0, 6)
@@ -38,15 +40,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         ${product.body_html}
       </div>
     </div>
-    <div class="middle-card">
+     <div class="middle-card">
       <div class="colors">Color</div>
       <div class="color-btns">
-        <button
+        <button class="cbtn"
           style="border-left: 7px solid ${product.options[1].values[0]} !important;"
         >
           ${product.options[1].values[0]}
         </button>
-        <button
+        <button class="cbtn"
           style="border-left: 7px solid ${product.options[1].values[1]} !important;"
         >
           ${product.options[1].values[1]}
@@ -68,8 +70,23 @@ document.addEventListener("DOMContentLoaded", async () => {
         </ul>
       </div>
     </div>
+      `;
+      document.querySelector(".fa-xmark").addEventListener("click", close);
+      document.querySelector(".product-details").style.display = "block";
+      document.querySelector(".grey-bg").style.display = "block";
+      document.body.style.overflow = "hidden";
+      // colorBtns[0].innerHTML=product.options[1].values[0];
+      // colorBtns[1].innerHTML=product.options[1].values[1];
+      // colorBtns.style.borderLeft="7px solid ${product.options[1].values[0]}"
 
-    <script>
+    });
+  });
+
+
+
+
+   
+
   const dropdown = document.querySelector(".custom-dropdown");
   const selected = dropdown.querySelector(".selected");
   const placeholder = dropdown.querySelector(".placeholder");
@@ -91,14 +108,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!dropdown.contains(e.target)) {
       dropdown.classList.remove("open");
     }
-  });
-</script>
-      `;
-      document.querySelector(".fa-xmark").addEventListener("click", close);
-      document.querySelector(".product-details").style.display = "block";
-      document.querySelector(".grey-bg").style.display = "block";
-      document.body.style.overflow = "hidden";
-    });
   });
 
   function close() {
