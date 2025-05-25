@@ -71,9 +71,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       document.querySelector(".grey-bg").style.display = "block";
       document.body.style.overflow = "hidden";
     });
-  });
-
-  const dropdown = document.querySelector(".custom-dropdown");
+     const dropdown = document.querySelector(".custom-dropdown");
   const selected = dropdown.querySelector(".selected");
   const placeholder = dropdown.querySelector(".placeholder");
   const options = dropdown.querySelectorAll(".dropdown-options li");
@@ -95,6 +93,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       dropdown.classList.remove("open");
     }
   });
+  });
+
+
+  
 
   function close() {
     document.querySelector(".product-details").style.display = "none";
