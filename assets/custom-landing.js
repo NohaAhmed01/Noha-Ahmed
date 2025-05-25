@@ -83,10 +83,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
 
-
-
-   
-
+ 
+ while(!dropdown);
   const dropdown = document.querySelector(".custom-dropdown");
   //const selected = dropdown.querySelector(".selected");
   const placeholder = dropdown.querySelector(".placeholder");
