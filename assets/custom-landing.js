@@ -72,13 +72,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   const options = dropdown.querySelectorAll(".dropdown-options li");
 
   placeholder.addEventListener("click", () => {
-          options.style.display="block";
+         dropdown.classList.toggle("open");
   });
 
   options.forEach((option) => {
     option.addEventListener("click", () => {
       placeholder.textContent = option.textContent;
-     options.style.display="block";
+      dropdown.classList.remove("open");
     });
   });
 
