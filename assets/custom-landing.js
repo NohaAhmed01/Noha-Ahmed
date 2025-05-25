@@ -40,6 +40,13 @@ document.addEventListener("DOMContentLoaded", async () => {
             ${product.body_html}
           </div>
         </div>
+        <div class="middle-card">
+          <div class="colors">Color</div>
+          <div class="color-btns">
+              <button>${product.options[1].values[0]}</button>
+              <button>${product.options[1].values[1]}</button>
+          </div>
+      </div>
       `;
       document.querySelector(".fa-xmark").addEventListener("click",close);
       document.querySelector(".product-details").style.display="block";

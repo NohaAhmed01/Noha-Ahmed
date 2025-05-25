@@ -246,6 +246,7 @@ header .header-end p {
   width: 311px;
   height: 447px;
   background-color: white;
+  color: #000;
   z-index: 10;
   display: none;
 }
@@ -266,7 +267,7 @@ header .header-end p {
   justify-content: space-between;
 }
 .product-details .card .top-card img {
-  padding: 0 10px 10px;
+  padding: 0 10px;
   width: 50%;
   height: 100%;
 }
@@ -287,9 +288,28 @@ header .header-end p {
   font-size: 16px;
 }
 .product-details .card .top-card .top-right p {
-  width: 146px;
-  height: fit-content;
+  width: fit-content;
+  height: max-content;
   font-family: "Jost", sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: normal;
+}
+.middle-card .colors {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #333;
+}
+.middle-card .color-btns {
+  display: flex;
+  justify-content: center;
+}
+.middle-card .color-btns button {
+  width: 50%;
+  height: 40.44px;
+  background-color: transparent;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
 }
