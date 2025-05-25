@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       console.log(data.products.slice(0, 6));
 
       const product = data.products[index];
-      card.innerHTML += `
+      card.innerHTML = `
         <div class="close">
       <i class="fa-solid fa-xmark"></i>
     </div>
@@ -71,6 +71,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       </div>
     </div>
 
+     <div class="bottom-card">
+        <button><span>ADD TO CART</span><i class="fa-solid fa-arrow-right-long"></i></button>
+     </div>
       `;
       document.querySelector(".fa-xmark").addEventListener("click", close);
       document.querySelector(".product-details").style.display = "block";
