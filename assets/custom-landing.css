@@ -308,6 +308,7 @@ header .header-end p {
 .middle-card .color-btns {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .middle-card .color-btns button {
   width: 50%;
