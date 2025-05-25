@@ -44,12 +44,12 @@ document.addEventListener("DOMContentLoaded", async () => {
      <div class="middle-card">
       <div class="colors">Color</div>
       <div class="color-btns">
-        <button class="cbtn" onload="btnIndex()"
+        <button class="cbtn" 
           style="border-left: 7px solid ${product.options[1].values[0]} !important;"
         >
           ${product.options[1].values[0]}
         </button>
-        <button class="cbtn" onload="btnIndex()"
+        <button class="cbtn" 
           style="border-left: 7px solid ${product.options[1].values[1]} !important;"
         >
           ${product.options[1].values[1]}
@@ -90,22 +90,30 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   const colorBtns = document.querySelectorAll(".cbtn");
-  
-  function btnIndex(){
-    const items = Array.from(document.getElementsByClassName("cbtn"));
+  colorBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // Remove 'active' class from all buttons
+    colorBtns.forEach((b) => b.classList.remove("active"));
 
-    // add click event listener for each collection item
-    items.forEach( ( button, index ) =>
-    {
-        button.addEventListener("click", () =>
-        {
-            // refer index of clicked <li> in collection <items> 
-            console.log(`You clicked on button index ${index}`);
+    // Add 'active' class to the clicked button
+    btn.classList.add("active");
+  });
+});
+  // function btnIndex(){
+  //   const items = Array.from(document.getElementsByClassName("cbtn"));
+
+  //   // add click event listener for each collection item
+  //   items.forEach( ( button, index ) =>
+  //   {
+  //       button.addEventListener("click", () =>
+  //       {
+  //           // refer index of clicked <li> in collection <items> 
+  //           console.log(`You clicked on button index ${index}`);
             
-        });
-    });
+  //       });
+  //   });
     
-  }
+  // }
   function changeBtnColor(){
     colorBtns[0].style.backgroundColor="#000";
     colorBtns[0].style.color="#fff";

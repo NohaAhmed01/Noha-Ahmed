@@ -322,6 +322,10 @@ header .header-end p {
   color: #fff;
   background-color: #000;
 }
+.cbtn.active{
+    background-color: #000;
+    color: #fff;
+}
 
 .middle-card .sizes {
   padding: 5px 0 0;
