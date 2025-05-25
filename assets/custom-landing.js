@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           </div>
 
           <div class="sizes">Size</div>
-          <select name="Choose your size" class="size-btn" onfocus='this.size=3;'>
+          <select name="Choose your size" class="size-btn" onfocus='this.size=4;'>
               <option style="text-align: left !important;" disabled selected hidden>Choose your size</option>
               <option id="${product.options[0].values[0]}">${product.options[0].values[0]}</option>
               <option id="${product.options[0].values[1]}">${product.options[0].values[1]}</option>
