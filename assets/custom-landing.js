@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const placeholder = dropdown.querySelector(".placeholder");
   const options = dropdown.querySelectorAll(".dropdown-options li");
 
-  selected.addEventListener("click", () => {
+  placeholder.addEventListener("click", () => {
           options.style.display="block";
   });
 
