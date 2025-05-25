@@ -35,21 +35,47 @@
   <div class="card">
     <!-- <div class="close">
       <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="top-card">
+      <img src="${product.images[0].src}" alt="${product.title}" />
+      <div class="top-right">
+        <span id="prod-title">${product.title}</span>
+        <span id="prod-price">${product.variants[0].price} €</span>
+        ${product.body_html}
+      </div>
+    </div>
+    <div class="middle-card">
+      <div class="colors">Color</div>
+      <div class="color-btns">
+        <button
+          style="border-left: 7px solid ${product.options[1].values[0]} !important;"
+        >
+          ${product.options[1].values[0]}
+        </button>
+        <button
+          style="border-left: 7px solid ${product.options[1].values[1]} !important;"
+        >
+          ${product.options[1].values[1]}
+        </button>
+      </div>
+
+      <div class="sizes">Size</div>
+
+      <div class="custom-dropdown">
+        <div class="selected">
+          <span class="placeholder">Choose your size</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <ul class="dropdown-options">
+          <li>${product.options[0].values[0]}</li>
+          <li>${product.options[0].values[1]}</li>
+          <li>${product.options[0].values[2]}</li>
+          <li>${product.options[0].values[3]}</li>
+        </ul>
+      </div>
     </div> -->
-    <!-- <div class="top-card">
-          <img
-            src="https://hips.hearstapps.com/hmg-prod/images/dahlia-1508785047.jpg?crop=1.00xw:0.669xh;0,0.0136xh&resize=980:*"
-            alt="${product.title}"
-          />
-          <div class="top-right">
-            <span>${product.title}</span>
-            <span>${product.price}</span>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, unde.</p>
-          </div>
-        </div> -->
   </div>
 </section>
-
 
 {{ "custom-landing.css" | asset_url | stylesheet_tag }}
 <script src="{{ 'custom-landing.js' | asset_url }}"></script>

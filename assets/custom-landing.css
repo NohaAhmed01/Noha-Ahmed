@@ -324,48 +324,37 @@ header .header-end p {
   font-size: 1.4rem;
   color: #333;
 }
-.middle-card  .custom-dropdown {
+
+.custom-dropdown {
   width: 100%;
   font-family: Arial, sans-serif;
   position: relative;
   user-select: none;
 }
 
-.middle-card  .selected {
+.selected {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid black;
   padding: 10px 12px;
-  cursor: pointer;
   background-color: white;
-  border-radius: 4px;
 }
 
-.middle-card  .placeholder {
+.placeholder {
   flex: 1;
   text-align: left;
+  border-right: 2px solid #000;
 }
 
-.middle-card  .arrow-box {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.middle-card  .divider {
-  width: 1px;
-  height: 20px;
-  background-color: black;
-}
-
-.middle-card  .arrow-box i {
+.selected i {
+  padding-left: 10px;
   color: black;
   font-size: 14px;
 }
 
 /* Dropdown list */
-.middle-card .dropdown-options {
+.dropdown-options {
   position: absolute;
   top: 100%;
   left: 0;
@@ -373,32 +362,30 @@ header .header-end p {
   border: 1px solid black;
   border-top: none;
   background-color: white;
-  max-height: 120px; /* Approx 3 items */
+  max-height: 95px; /* Approx 3 items showing */
   overflow-y: auto;
   display: none;
   z-index: 10;
 }
 
 /* Remove scrollbar appearance */
-.middle-card  .dropdown-options::-webkit-scrollbar {
+.dropdown-options::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
 
-.middle-card  .dropdown-options li {
-  padding: 10px;
+.dropdown-options li {
+  padding: 8px;
   text-align: center;
   cursor: pointer;
 }
 
-.middle-card  .dropdown-options li:hover {
+.dropdown-options li:hover {
   background-color: black;
   color: white;
 }
 
 /* Open state */
-.middle-card  .custom-dropdown.open .dropdown-options {
+.custom-dropdown.open .dropdown-options {
   display: block;
 }
-
-

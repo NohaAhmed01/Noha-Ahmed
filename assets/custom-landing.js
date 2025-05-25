@@ -28,44 +28,46 @@ document.addEventListener("DOMContentLoaded", async () => {
       const product = data.products[index];
       card.innerHTML = `
         <div class="close">
-          <i class="fa-solid fa-xmark"></i>
-        </div>
-        <div class="top-card">
-          <img
-            src="${product.images[0].src}"
-            alt="${product.title}"
-          />
-          <div class="top-right">
-            <span id="prod-title">${product.title}</span>
-            <span id="prod-price">${product.variants[0].price} €</span>
-            ${product.body_html}
-          </div>
-        </div>
-        <div class="middle-card">
-          <div class="colors">Color</div>
-          <div class="color-btns">
-              <button style="border-left: 7px solid ${product.options[1].values[0]} !important;">${product.options[1].values[0]}</button>
-              <button style="border-left: 7px solid ${product.options[1].values[1]} !important;">${product.options[1].values[1]}</button>
-          </div>
-
-          <div class="sizes">Size</div>
-          <div class="custom-dropdown">
-           <div class="selected">
-            <span class="placeholder">Choose your size</span>
-            <div class="arrow-box">
-              <div class="divider"></div>
-              <i class="fa-solid fa-chevron-down"></i>
-            </div>
-          </div>
-           <ul class="dropdown-options">
-             <li>${product.options[0].values[0]}</li>
-             <li>${product.options[0].values[1]}</li>
-             <li>${product.options[0].values[2]}</li>
-             <li>${product.options[0].values[3]}</li>
-           </ul>
-          </div>
-
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="top-card">
+      <img src="${product.images[0].src}" alt="${product.title}" />
+      <div class="top-right">
+        <span id="prod-title">${product.title}</span>
+        <span id="prod-price">${product.variants[0].price} €</span>
+        ${product.body_html}
       </div>
+    </div>
+    <div class="middle-card">
+      <div class="colors">Color</div>
+      <div class="color-btns">
+        <button
+          style="border-left: 7px solid ${product.options[1].values[0]} !important;"
+        >
+          ${product.options[1].values[0]}
+        </button>
+        <button
+          style="border-left: 7px solid ${product.options[1].values[1]} !important;"
+        >
+          ${product.options[1].values[1]}
+        </button>
+      </div>
+
+      <div class="sizes">Size</div>
+
+      <div class="custom-dropdown">
+        <div class="selected">
+          <span class="placeholder">Choose your size</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <ul class="dropdown-options">
+          <li>${product.options[0].values[0]}</li>
+          <li>${product.options[0].values[1]}</li>
+          <li>${product.options[0].values[2]}</li>
+          <li>${product.options[0].values[3]}</li>
+        </ul>
+      </div>
+    </div>
       `;
       document.querySelector(".fa-xmark").addEventListener("click", close);
       document.querySelector(".product-details").style.display = "block";
@@ -97,7 +99,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       dropdown.classList.remove("open");
     }
   });
-  
+
   function close() {
     document.querySelector(".product-details").style.display = "none";
     document.querySelector(".grey-bg").style.display = "none";
