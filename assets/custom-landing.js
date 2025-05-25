@@ -83,13 +83,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   const options = dropdown.querySelectorAll(".dropdown-options li");
 
   selected.addEventListener("click", () => {
-    dropdown.classList.toggle("open");
+          dropdown.style.display="block";
   });
 
   options.forEach((option) => {
     option.addEventListener("click", () => {
       placeholder.textContent = option.textContent;
-      dropdown.classList.remove("open");
+      dropdown.style.display="block";
     });
   });
 
