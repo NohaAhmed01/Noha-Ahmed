@@ -370,7 +370,7 @@ header .header-end p {
   border: 1px solid black;
   border-top: none;
   background-color: white;
-  max-height: 95px; /* Approx 3 items showing */
+  max-height: 105px; /* Approx 3 items showing */
   overflow-y: auto;
   display: none;
   z-index: 10;
@@ -383,7 +383,7 @@ header .header-end p {
 }
 
 .dropdown-options li {
-  padding: 8px;
+  padding: 5px;
   text-align: center;
   cursor: pointer;
 }

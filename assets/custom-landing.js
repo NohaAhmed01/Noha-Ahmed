@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
   const dropdown = document.querySelector(".custom-dropdown");
-  //const selected = dropdown.querySelector(".selected");
   const placeholder = dropdown.querySelector(".placeholder");
   const options = dropdown.querySelectorAll(".dropdown-options li");
 
