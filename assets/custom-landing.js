@@ -91,9 +91,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const colorBtns = document.querySelectorAll(".cbtn");
   
+  const items = Array.from(document.getElementsByTagName("button"));
+items.forEach( ( button, index ) =>
+    {
+        button.addEventListener("click", () =>
+        {
+            if(index===1||index===2)
+            console.log(`You clicked on button index ${index}`);
+            
+        });
+    });
   function changeBtnColor(){
-    colorBtns.style.backgroundColor="#000";
-    colorBtns.style.color="#fff";
+    colorBtns[0].style.backgroundColor="#000";
+    colorBtns[0].style.color="#fff";
   }
   function close() {
     document.querySelector(".product-details").style.display = "none";
