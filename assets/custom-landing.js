@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
  
- while(!document.querySelector(".middle-card"));
+
   const dropdown = document.querySelector(".custom-dropdown");
   //const selected = dropdown.querySelector(".selected");
   const placeholder = dropdown.querySelector(".placeholder");
