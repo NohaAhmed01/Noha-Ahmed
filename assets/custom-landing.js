@@ -48,13 +48,22 @@ document.addEventListener("DOMContentLoaded", async () => {
           </div>
 
           <div class="sizes">Size</div>
-          <select name="Choose your size" class="size-btn" onfocus='this.size=4;'>
-              <option style="text-align: left !important;" disabled selected hidden>Choose your size</option>
-              <option id="${product.options[0].values[0]}">${product.options[0].values[0]}</option>
-              <option id="${product.options[0].values[1]}">${product.options[0].values[1]}</option>
-              <option id="${product.options[0].values[2]}">${product.options[0].values[2]}</option>
-              <option id="${product.options[0].values[3]}">${product.options[0].values[3]}</option>
-          </select>
+          <div class="custom-dropdown">
+           <div class="selected">
+            <span class="placeholder">Choose your size</span>
+            <div class="arrow-box">
+              <div class="divider"></div>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+           <ul class="dropdown-options">
+             <li>${product.options[0].values[0]}</li>
+             <li>${product.options[0].values[1]}</li>
+             <li>${product.options[0].values[2]}</li>
+             <li>${product.options[0].values[3]}</li>
+           </ul>
+          </div>
+
       </div>
       `;
       document.querySelector(".fa-xmark").addEventListener("click", close);
@@ -62,6 +71,29 @@ document.addEventListener("DOMContentLoaded", async () => {
       document.querySelector(".grey-bg").style.display = "block";
       document.body.style.overflow = "hidden";
     });
+  });
+
+  const dropdown = document.querySelector(".custom-dropdown");
+  const selected = dropdown.querySelector(".selected");
+  const placeholder = dropdown.querySelector(".placeholder");
+  const options = dropdown.querySelectorAll(".dropdown-options li");
+
+  selected.addEventListener("click", () => {
+    dropdown.classList.toggle("open");
+  });
+
+  options.forEach((option) => {
+    option.addEventListener("click", () => {
+      placeholder.textContent = option.textContent;
+      dropdown.classList.remove("open");
+    });
+  });
+
+  // Close dropdown if clicked outside
+  document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove("open");
+    }
   });
 
   function close() {

@@ -324,13 +324,81 @@ header .header-end p {
   font-size: 1.4rem;
   color: #333;
 }
-.middle-card .size-btn{
+.custom-dropdown {
   width: 100%;
-  height: 40.44px;
-  background-color: transparent;
-  font-family: "Jost", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  text-align: center;
-  
+  font-family: Arial, sans-serif;
+  position: relative;
+  user-select: none;
 }
+
+.selected {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  padding: 10px 12px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.placeholder {
+  flex: 1;
+  text-align: left;
+}
+
+.arrow-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background-color: black;
+}
+
+.arrow-box i {
+  color: black;
+  font-size: 14px;
+}
+
+/* Dropdown list */
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid black;
+  border-top: none;
+  background-color: white;
+  max-height: 120px; /* Approx 3 items */
+  overflow-y: auto;
+  display: none;
+  z-index: 10;
+}
+
+/* Remove scrollbar appearance */
+.dropdown-options::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.dropdown-options li {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropdown-options li:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Open state */
+.custom-dropdown.open .dropdown-options {
+  display: block;
+}
+
+
