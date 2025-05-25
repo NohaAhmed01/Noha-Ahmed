@@ -1,32 +1,3 @@
-function initDropdown(dropdown) {
-  const selected = dropdown.querySelector(".selected");
-  const optionsContainer = dropdown.querySelector(".dropdown-options");
-  const optionsList = dropdown.querySelectorAll("li");
-
-  if (!selected || !optionsContainer || optionsList.length === 0) return;
-
-  selected.addEventListener("click", () => {
-    optionsContainer.classList.toggle("open");
-  });
-
-  optionsList.forEach(option => {
-    option.addEventListener("click", () => {
-      selected.innerHTML = option.innerHTML;
-      optionsContainer.classList.remove("open");
-    });
-  });
-}
-
-// MutationObserver to wait for dropdown to appear
-const observer = new MutationObserver(() => {
-  const dropdown = document.querySelector(".dropdown-options");
-  if (dropdown) {
-    initDropdown(dropdown);
-    observer.disconnect(); // Stop watching once initialized
-  }
-});
-
-
 //products grid display
 document.addEventListener("DOMContentLoaded", async () => {
   const container = document.getElementsByClassName("row")[0];
@@ -51,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   container.innerHTML = content;
 
   //grid layover creation
-  const card = document.querySelector(".card");
+  const card = document.querySelector(".top");
   document.querySelectorAll(".clickable").forEach((el, index) => {
     el.addEventListener("click", () => {
       console.log(data.products.slice(0, 6));
@@ -113,53 +84,28 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
 
+  const dropdown = document.querySelector(".custom-dropdown");
+  //const selected = dropdown.querySelector(".selected");
+  const placeholder = dropdown.querySelector(".placeholder");
+  const options = dropdown.querySelectorAll(".dropdown-options li");
 
+  placeholder.addEventListener("click", () => {
+          options.style.display="block";
+  });
 
+  options.forEach((option) => {
+    option.addEventListener("click", () => {
+      placeholder.textContent = option.textContent;
+     options.style.display="block";
+    });
+  });
 
-
-
-
-
-
-  const dropdown = document.querySelector(".dropdown-options");
-
-  if (dropdown) {
-    initDropdown(dropdown); // If it's already there
-  } else {
-    // Otherwise, observe until it's added
-    observer.observe(document.body, { childList: true, subtree: true });
-  }
-
-
-
-
-
-
-
-
-
-  // const dropdown = document.querySelector(".custom-dropdown");
-  // //const selected = dropdown.querySelector(".selected");
-  // const placeholder = dropdown.querySelector(".placeholder");
-  // const options = dropdown.querySelectorAll(".dropdown-options li");
-
-  // placeholder.addEventListener("click", () => {
-  //         options.style.display="block";
-  // });
-
-  // options.forEach((option) => {
-  //   option.addEventListener("click", () => {
-  //     placeholder.textContent = option.textContent;
-  //    options.style.display="block";
-  //   });
-  // });
-
-  // // Close dropdown if clicked outside
-  // document.addEventListener("click", (e) => {
-  //   if (!dropdown.contains(e.target)) {
-  //     dropdown.classList.remove("open");
-  //   }
-  // });
+  // Close dropdown if clicked outside
+  document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove("open");
+    }
+  });
 
   function close() {
     document.querySelector(".product-details").style.display = "none";
