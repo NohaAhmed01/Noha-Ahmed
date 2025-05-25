@@ -255,7 +255,11 @@ header .header-end p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
+  
+}
+.product-details .close{
+    display: flex;
+    align-items: flex-end;
 }
 .product-details .fa-xmark {
   font-size: 18px;
