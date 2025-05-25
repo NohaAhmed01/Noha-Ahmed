@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         >
           ${product.options[1].values[0]}
         </button>
-        <button class="cbtn" onclick="changeBtnColor()"
+        <button class="cbtn" 
           style="border-left: 7px solid ${product.options[1].values[1]} !important;"
         >
           ${product.options[1].values[1]}
@@ -96,7 +96,7 @@ items.forEach( ( button, index ) =>
     {
         button.addEventListener("click", () =>
         {
-            if(index===1||index===2)
+            
             console.log(`You clicked on button index ${index}`);
             
         });
