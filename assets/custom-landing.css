@@ -333,7 +333,7 @@ header .header-end p {
 
 .custom-dropdown {
   width: 100%;
-  font-family: Arial, sans-serif;
+  font-family: "Jost", sans-serif;
   position: relative;
   user-select: none;
 }
@@ -349,6 +349,7 @@ header .header-end p {
 
 .placeholder {
   flex: 1;
+  font-size: 16px;
   text-align: left;
   border-right: 2px solid #000;
   background-color: transparent;
