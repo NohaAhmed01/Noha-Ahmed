@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const response = await fetch("/products.json");
   const data = await response.json();
   let i = 0;
-  // const colorBtns = document.querySelectorAll(".cbtn");
+
   
   //grid creation
   const content = data.products
@@ -89,6 +89,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
+  const colorBtns = document.querySelectorAll(".cbtn");
+  colorBtns.addEventListener("click",changeBtnColor);
+  function changeBtnColor(){
+    colorBtns.style.backgroundColor="#000";
+    colorBtns.style.color="#fff";
+  }
   function close() {
     document.querySelector(".product-details").style.display = "none";
     document.querySelector(".grey-bg").style.display = "none";
