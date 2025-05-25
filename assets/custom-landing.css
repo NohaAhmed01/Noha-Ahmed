@@ -322,9 +322,9 @@ header .header-end p {
   color: #fff;
   background-color: #000;
 }
-.cbtn.active{
-    background-color: #000;
+.middle-card .color-btns .cbtn.active{
     color: #fff;
+  background-color: #000;
 }
 
 .middle-card .sizes {
