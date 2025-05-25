@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       console.log(data.products.slice(0, 6));
 
       const product = data.products[index];
-      card.innerHTML=`
+      card.innerHTML = `
         <div class="close">
           <i class="fa-solid fa-xmark"></i>
         </div>
@@ -46,18 +46,26 @@ document.addEventListener("DOMContentLoaded", async () => {
               <button style="border-left: 7px solid ${product.options[1].values[0]} !important;">${product.options[1].values[0]}</button>
               <button style="border-left: 7px solid ${product.options[1].values[1]} !important;">${product.options[1].values[1]}</button>
           </div>
+
+          <div class="sizes">Size</div>
+          <select class="size-btn">
+              <option id="${product.options[0].values[0]}">${product.options[0].values[0]}</option>
+              <option id="${product.options[0].values[1]}">${product.options[0].values[1]}</option>
+              <option id="${product.options[0].values[2]}">${product.options[0].values[2]}</option>
+              <option id="${product.options[0].values[3]}">${product.options[0].values[3]}</option>
+          </select>
       </div>
       `;
-      document.querySelector(".fa-xmark").addEventListener("click",close);
-      document.querySelector(".product-details").style.display="block";
-      document.querySelector(".grey-bg").style.display="block";
-      document.body.style.overflow="hidden";
+      document.querySelector(".fa-xmark").addEventListener("click", close);
+      document.querySelector(".product-details").style.display = "block";
+      document.querySelector(".grey-bg").style.display = "block";
+      document.body.style.overflow = "hidden";
     });
   });
 
-  function close(){
-     document.querySelector(".product-details").style.display="none";
-      document.querySelector(".grey-bg").style.display="none";
-      document.body.style.overflow="auto";
+  function close() {
+    document.querySelector(".product-details").style.display = "none";
+    document.querySelector(".grey-bg").style.display = "none";
+    document.body.style.overflow = "auto";
   }
 });
