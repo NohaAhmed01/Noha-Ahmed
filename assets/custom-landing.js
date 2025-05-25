@@ -89,15 +89,17 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   if (tcard) {
-    const colorBtns = document.querySelectorAll(".cbtn");
-    colorBtns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        // Remove 'active' class from all buttons
-        colorBtns.forEach((b) => b.classList.remove("active"));
+   // const colorBtns = document.querySelectorAll(".cbtn");
+     tcard.addEventListener("click", (event) => {
+      const clickedBtn = event.target.closest(".cbtn");
+      if (!clickedBtn) return; // clicked outside a color button
 
-        // Add 'active' class to the clicked button
-        btn.classList.add("active");
-      });
+      // Remove 'active' from all buttons
+      const allBtns = tcard.querySelectorAll(".cbtn");
+      allBtns.forEach((btn) => btn.classList.remove("active"));
+
+      // Add 'active' to the clicked one
+      clickedBtn.classList.add("active");
     });
   }
 
