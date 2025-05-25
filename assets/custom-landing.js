@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const data = await response.json();
   let i = 0;
 
-  
+
   //grid creation
   const content = data.products
     .slice(0, 6)
@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   //grid layover creation
   const tcard = document.querySelector(".top");
-  const bcard = document.querySelector(".bottom");
   document.querySelectorAll(".clickable").forEach((el, index) => {
     el.addEventListener("click", () => {
       console.log(data.products.slice(0, 6));
@@ -72,7 +71,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const options = dropdown.querySelectorAll(".dropdown-options li");
 
   selected.addEventListener("click", () => {
-         dropdown.classList.toggle("open");
+    dropdown.classList.toggle("open");
   });
 
   options.forEach((option) => {
@@ -89,16 +88,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
-  const colorBtns = document.querySelectorAll(".cbtn");
-  colorBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    // Remove 'active' class from all buttons
-    colorBtns.forEach((b) => b.classList.remove("active"));
+  if (tcard) {
+    const colorBtns = document.querySelectorAll(".cbtn");
+    colorBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        // Remove 'active' class from all buttons
+        colorBtns.forEach((b) => b.classList.remove("active"));
 
-    // Add 'active' class to the clicked button
-    btn.classList.add("active");
-  });
-});
+        // Add 'active' class to the clicked button
+        btn.classList.add("active");
+      });
+    });
+  }
+
   // function btnIndex(){
   //   const items = Array.from(document.getElementsByClassName("cbtn"));
 
@@ -109,14 +111,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   //       {
   //           // refer index of clicked <li> in collection <items> 
   //           console.log(`You clicked on button index ${index}`);
-            
+
   //       });
   //   });
-    
+
   // }
-  function changeBtnColor(){
-    colorBtns[0].style.backgroundColor="#000";
-    colorBtns[0].style.color="#fff";
+  function changeBtnColor() {
+    colorBtns[0].style.backgroundColor = "#000";
+    colorBtns[0].style.color = "#fff";
   }
   function close() {
     document.querySelector(".product-details").style.display = "none";
