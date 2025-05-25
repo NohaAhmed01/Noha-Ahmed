@@ -264,7 +264,7 @@ header .header-end p {
   font-size: 18px;
 }
 .product-details .card .top-card {
-  height: 210px;
+  height: 190px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -299,7 +299,7 @@ header .header-end p {
   line-height: normal;
 }
 .middle-card .colors {
-  padding: 15px 0 5px;
+  padding: 10px 0 5px;
   font-family: "Jost", sans-serif;
   font-weight: 400;
   font-size: 1.4rem;
