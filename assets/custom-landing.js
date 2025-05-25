@@ -57,10 +57,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       </div>
       `
 
-      bcard.innerHTML=`<div class="bottom-card">
-        <button><span>ADD TO CART</span><i class="fa-solid fa-arrow-right-long"></i></button>
-     </div>`;
-     
       document.querySelector(".fa-xmark").addEventListener("click", close);
       document.querySelector(".product-details").style.display = "block";
       document.querySelector(".grey-bg").style.display = "block";
