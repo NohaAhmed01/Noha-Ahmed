@@ -324,14 +324,14 @@ header .header-end p {
   font-size: 1.4rem;
   color: #333;
 }
-.custom-dropdown {
+.middle-card  .custom-dropdown {
   width: 100%;
   font-family: Arial, sans-serif;
   position: relative;
   user-select: none;
 }
 
-.selected {
+.middle-card  .selected {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -342,30 +342,30 @@ header .header-end p {
   border-radius: 4px;
 }
 
-.placeholder {
+.middle-card  .placeholder {
   flex: 1;
   text-align: left;
 }
 
-.arrow-box {
+.middle-card  .arrow-box {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.divider {
+.middle-card  .divider {
   width: 1px;
   height: 20px;
   background-color: black;
 }
 
-.arrow-box i {
+.middle-card  .arrow-box i {
   color: black;
   font-size: 14px;
 }
 
 /* Dropdown list */
-.dropdown-options {
+.middle-card .dropdown-options {
   position: absolute;
   top: 100%;
   left: 0;
@@ -380,24 +380,24 @@ header .header-end p {
 }
 
 /* Remove scrollbar appearance */
-.dropdown-options::-webkit-scrollbar {
+.middle-card  .dropdown-options::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
 
-.dropdown-options li {
+.middle-card  .dropdown-options li {
   padding: 10px;
   text-align: center;
   cursor: pointer;
 }
 
-.dropdown-options li:hover {
+.middle-card  .dropdown-options li:hover {
   background-color: black;
   color: white;
 }
 
 /* Open state */
-.custom-dropdown.open .dropdown-options {
+.middle-card  .custom-dropdown.open .dropdown-options {
   display: block;
 }
 
