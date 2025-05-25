@@ -403,3 +403,7 @@ header .header-end p {
     background-color: #000;
     color: #fff;
 }
+.bottom-card button span{
+    font-size: 20px;
+    text-align: right;
+}
