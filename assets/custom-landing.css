@@ -402,6 +402,7 @@ header .header-end p {
     font-size: 16px;
     background-color: #000;
     color: #fff;
-    display: flex;
-    justify-content: space-around;
+}
+.bottom-card button i{
+    font-size: 20px;
 }
