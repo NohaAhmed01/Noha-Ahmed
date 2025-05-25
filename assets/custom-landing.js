@@ -91,16 +91,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const colorBtns = document.querySelectorAll(".cbtn");
   
-  const items = Array.from(document.getElementsByTagName("button"));
-items.forEach( ( button, index ) =>
+  const items = Array.from(document.getElementsByClassName("cbtn"));
+
+    // add click event listener for each collection item
+    items.forEach( ( button, index ) =>
     {
         button.addEventListener("click", () =>
         {
-            
+            // refer index of clicked <li> in collection <items> 
             console.log(`You clicked on button index ${index}`);
             
         });
     });
+    
   function changeBtnColor(){
     colorBtns[0].style.backgroundColor="#000";
     colorBtns[0].style.color="#fff";
