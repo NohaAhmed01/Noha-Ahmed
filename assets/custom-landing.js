@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         <div class="middle-card">
           <div class="colors">Color</div>
           <div class="color-btns">
-              <button>${product.options[1].values[0]}</button>
-              <button>${product.options[1].values[1]}</button>
+              <button style="border-left: ${product.options[1].values[0]} 1px solid;">${product.options[1].values[0]}</button>
+              <button style="border-left: ${product.options[1].values[1]} 1px solid;">${product.options[1].values[1]}</button>
           </div>
       </div>
       `;
