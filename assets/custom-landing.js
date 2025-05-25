@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         >
           ${product.options[1].values[0]}
         </button>
-        <button class="cbtn"
+        <button class="cbtn" onclick="changeBtnColor()"
           style="border-left: 7px solid ${product.options[1].values[1]} !important;"
         >
           ${product.options[1].values[1]}
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   const colorBtns = document.querySelectorAll(".cbtn");
-  colorBtns.addEventListener("click",changeBtnColor);
+  
   function changeBtnColor(){
     colorBtns.style.backgroundColor="#000";
     colorBtns.style.color="#fff";
