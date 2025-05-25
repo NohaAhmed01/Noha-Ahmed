@@ -70,14 +70,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         </ul>
       </div>
     </div>
+    
       `;
       document.querySelector(".fa-xmark").addEventListener("click", close);
       document.querySelector(".product-details").style.display = "block";
       document.querySelector(".grey-bg").style.display = "block";
       document.body.style.overflow = "hidden";
-      // colorBtns[0].innerHTML=product.options[1].values[0];
-      // colorBtns[1].innerHTML=product.options[1].values[1];
-      // colorBtns.style.borderLeft="7px solid ${product.options[1].values[0]}"
 
     });
   });
