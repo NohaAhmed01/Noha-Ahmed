@@ -5,10 +5,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   const data = await response.json();
   let i = 0;
 
-
-  //uncomment
-  // let selectedColor = null;
-  // let selectedSize = null;
+  //variables to get variant chosen to send to cart
+  let selectedColor = null;
+  let selectedSize = null;
 
   //grid creation
   const content = data.products
@@ -87,40 +86,48 @@ document.addEventListener("DOMContentLoaded", async () => {
       document.querySelector(".grey-bg").style.display = "block";
       document.body.style.overflow = "hidden";
 
+      //add to cart button functionality
+      const addToCartBtn = document.querySelector(".add-to-cart-btn");
 
+      addToCartBtn.addEventListener("click", () => {
+        if (!selectedColor || !selectedSize) {
+          alert("Please select a size and color.");
+          return;
+        }
 
+        const variantId = getVariantId(product, selectedColor, selectedSize);
 
-      //uncomment
-      //variantId = getVariantId(product, selectedColor, selectedSize);
+        if (!variantId) {
+          alert("This combination is not available.");
+          return;
+        }
+
+        // Send to Shopify cart
+        fetch("/cart/add.js", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ quantity: 1, id: variantId }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            alert("Added to cart!");
+            // Optionally update UI cart count here
+          })
+          .catch((err) => {
+            console.error(err);
+            alert("There was an error adding to cart.");
+          });
+      });
+
+     
     });
   });
-
-  
-
-
-//uncomment
-
-
-
-
-  // options.forEach((option) => {
-  //   option.addEventListener("click", (e) => {
-  //     selectedSize = e.target.innerText.trim();
-  //     placeholder.innerText = selectedSize;
-  //   });
-  // });
-
-
-
-
-
-
 
 
 
   if (tcard) {
     tcard.addEventListener("click", (event) => {
-       sizesControl();
+      sizesControl();
       const clickedBtn = event.target.closest(".cbtn");
       if (!clickedBtn) return; // clicked outside a color button
 
@@ -132,66 +139,56 @@ document.addEventListener("DOMContentLoaded", async () => {
       clickedBtn.classList.add("active");
     });
 
-
-   
-
-
-
-
-//uncomment
-
-
-
-
-
-
-    // document.querySelectorAll(".cbtn").forEach((btn) => {
-    //   btn.addEventListener("click", (e) => {
-    //     selectedColor = e.target.innerText.trim();
-    //   });
-    // });
+    //uncomment
+    //get the picked color
+    document.querySelectorAll(".cbtn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        selectedColor = e.target.innerText.trim();
+      });
+    });
   }
 
+  function sizesControl() {
+    const dropdown = document.querySelector(".custom-dropdown");
+    const selected = dropdown.querySelector(".selected");
+    const placeholder = dropdown.querySelector(".placeholder");
+    const options = dropdown.querySelectorAll(".dropdown-options li");
 
+    selected.addEventListener("click", () => {
+      dropdown.classList.toggle("open");
+    });
 
-function sizesControl(){
-const dropdown = document.querySelector(".custom-dropdown");
-  const selected = dropdown.querySelector(".selected");
-  const placeholder = dropdown.querySelector(".placeholder");
-  const options = dropdown.querySelectorAll(".dropdown-options li");
+    options.forEach((option) => {
+      option.addEventListener("click", () => {
+        placeholder.textContent = option.textContent;
+        dropdown.classList.remove("open");
+      });
+    });
 
-  selected.addEventListener("click", () => {
-    dropdown.classList.toggle("open");
-  });
-
+    // Close dropdown if clicked outside
+    document.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove("open");
+      }
+    });
+      //uncomment
+//get the picked size 
   options.forEach((option) => {
-    option.addEventListener("click", () => {
-      placeholder.textContent = option.textContent;
-      dropdown.classList.remove("open");
+    option.addEventListener("click", (e) => {
+      selectedSize = e.target.innerText.trim();
+      placeholder.innerText = selectedSize;
     });
   });
+  }
 
-  // Close dropdown if clicked outside
-  document.addEventListener("click", (e) => {
-    if (!dropdown.contains(e.target)) {
-      dropdown.classList.remove("open");
-    }
-  });
+  //uncomment
 
-}
-
-
-
-//uncomment
-
-
-
-  // //get the variant ID based on the selected color and size
-  // function getVariantId(product, color, size) {
-  //   return product.variants.find(
-  //     (v) => v.option1 === size && v.option2 === color
-  //   )?.id;
-  // }
+  //get the variant ID based on the selected color and size
+  function getVariantId(product, color, size) {
+    return product.variants.find(
+      (v) => v.option1 === size && v.option2 === color
+    )?.id;
+  }
 
   // const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
 
@@ -225,13 +222,6 @@ const dropdown = document.querySelector(".custom-dropdown");
   //       alert("There was an error adding to cart.");
   //     });
   // });
-
-
-
-
-
-
-
 
   function close() {
     document.querySelector(".product-details").style.display = "none";
