@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   //get the variant ID based on the selected color and size
-  function getVariantId(product, color, size) {
+  function getVariantId(product) {
     //get the picked color
     document.querySelectorAll(".cbtn").forEach((btn) => {
       btn.addEventListener("click", (e) => {
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     });
     return product.variants.find(
-      (v) => v.option1 === size && v.option2 === color
+      (v) => v.option1 === selectedSize && v.option2 === selectedColor
     )?.id;
   }
 
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
-    const variantId = getVariantId(product, selectedColor, selectedSize);
+    const variantId = getVariantId(product);
 
     if (!variantId) {
       alert("This combination is not available.");
