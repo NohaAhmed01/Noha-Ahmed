@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   let i = 0;
 
 
+  //uncomment
+  // let selectedColor = null;
+  // let selectedSize = null;
+
   //grid creation
   const content = data.products
     .slice(0, 6)
@@ -54,18 +58,36 @@ document.addEventListener("DOMContentLoaded", async () => {
           ${product.options[1].values[1]}
         </button>
       </div>
-      `
+          <div class="sizes">Size</div>
+    <div class="custom-dropdown">
+      <div class="selected">
+        <span class="placeholder">Choose your size</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <ul class="dropdown-options">
+        <li>XS</li>
+        <li>S</li>
+        <li>M</li>
+        <li>L</li>
+      </ul>
+    </div>
+      `;
 
       document.querySelector(".fa-xmark").addEventListener("click", close);
       document.querySelector(".product-details").style.display = "block";
       document.querySelector(".grey-bg").style.display = "block";
       document.body.style.overflow = "hidden";
 
+
+
+
+      //uncomment
+      //variantId = getVariantId(product, selectedColor, selectedSize);
     });
   });
 
-
-  const dropdown = document.querySelector(".custom-dropdown");
+function sizesControl(){
+const dropdown = document.querySelector(".custom-dropdown");
   const selected = dropdown.querySelector(".selected");
   const placeholder = dropdown.querySelector(".placeholder");
   const options = dropdown.querySelectorAll(".dropdown-options li");
@@ -88,9 +110,32 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
+}
+  
+
+
+//uncomment
+
+
+
+
+  // options.forEach((option) => {
+  //   option.addEventListener("click", (e) => {
+  //     selectedSize = e.target.innerText.trim();
+  //     placeholder.innerText = selectedSize;
+  //   });
+  // });
+
+
+
+
+
+
+
+
+
   if (tcard) {
-   // const colorBtns = document.querySelectorAll(".cbtn");
-     tcard.addEventListener("click", (event) => {
+    tcard.addEventListener("click", (event) => {
       const clickedBtn = event.target.closest(".cbtn");
       if (!clickedBtn) return; // clicked outside a color button
 
@@ -101,27 +146,84 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Add 'active' to the clicked one
       clickedBtn.classList.add("active");
     });
+
+
+    sizesControl();
+
+
+
+
+//uncomment
+
+
+
+
+
+
+    // document.querySelectorAll(".cbtn").forEach((btn) => {
+    //   btn.addEventListener("click", (e) => {
+    //     selectedColor = e.target.innerText.trim();
+    //   });
+    // });
   }
 
-  // function btnIndex(){
-  //   const items = Array.from(document.getElementsByClassName("cbtn"));
 
-  //   // add click event listener for each collection item
-  //   items.forEach( ( button, index ) =>
-  //   {
-  //       button.addEventListener("click", () =>
-  //       {
-  //           // refer index of clicked <li> in collection <items> 
-  //           console.log(`You clicked on button index ${index}`);
 
-  //       });
-  //   });
 
+
+
+
+//uncomment
+
+
+
+  // //get the variant ID based on the selected color and size
+  // function getVariantId(product, color, size) {
+  //   return product.variants.find(
+  //     (v) => v.option1 === size && v.option2 === color
+  //   )?.id;
   // }
-  function changeBtnColor() {
-    colorBtns[0].style.backgroundColor = "#000";
-    colorBtns[0].style.color = "#fff";
-  }
+
+  // const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+
+  // addToCartButtons.addEventListener("click", () => {
+  //   if (!selectedColor || !selectedSize) {
+  //     alert("Please select a size and color.");
+  //     return;
+  //   }
+
+  //   //const product = /* fetch or have your current product object here */;
+  //   //const variantId = getVariantId(product, selectedColor, selectedSize);
+
+  //   if (!variantId) {
+  //     alert("This combination is not available.");
+  //     return;
+  //   }
+
+  //   // Send to Shopify cart
+  //   fetch("/cart/add.js", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({ quantity: 1, id: variantId }),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       alert("Added to cart!");
+  //       // Optionally update UI cart count here
+  //     })
+  //     .catch((err) => {
+  //       console.error(err);
+  //       alert("There was an error adding to cart.");
+  //     });
+  // });
+
+
+
+
+
+
+
+
   function close() {
     document.querySelector(".product-details").style.display = "none";
     document.querySelector(".grey-bg").style.display = "none";
