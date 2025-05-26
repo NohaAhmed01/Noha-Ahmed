@@ -86,21 +86,23 @@ document.addEventListener("DOMContentLoaded", async () => {
       document.querySelector(".grey-bg").style.display = "block";
       document.body.style.overflow = "hidden";
 
-    //get the picked color
-    document.querySelectorAll(".cbtn").forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        selectedColor = e.target.innerText.trim();
+      //get the picked color
+      document.querySelectorAll(".cbtn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          selectedColor = e.target.innerText.trim();
+        });
       });
-    });
 
       //add to cart button functionality
       const addToCartBtn = document.querySelector(".add-to-cart-btn");
-      addToCartBtn.addEventListener("click", addToCart);
+      addToCartBtn.addEventListener("click", () => {
+        addToCart(product, selectedColor, selectedSize);
+      });
     });
   });
 
   if (tcard) {
-        //get the picked color
+    //get the picked color
     document.querySelectorAll(".cbtn").forEach((btn) => {
       btn.addEventListener("click", (e) => {
         selectedColor = e.target.innerText.trim();
@@ -162,8 +164,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function addToCart(product, color, size) {
-    console.log("color is "+selectedColor+" and size is "+selectedSize);
-    
+    console.log("color is " + selectedColor + " and size is " + selectedSize);
+
     if (!selectedColor || !selectedSize) {
       alert("Please select a size and color.");
       return;
