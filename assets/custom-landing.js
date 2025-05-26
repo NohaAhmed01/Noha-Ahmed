@@ -93,7 +93,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   if (tcard) {
-
     tcard.addEventListener("click", (event) => {
       sizesControl();
 
@@ -106,19 +105,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       // Add 'active' to the clicked one
       clickedBtn.classList.add("active");
-    });
-         //get the picked color
-    document.querySelectorAll(".cbtn").forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        selectedColor = e.target.innerText.trim();
-      });
-    });
-    //get the picked size
-    dropdown.querySelectorAll(".dropdown-options li").forEach((option) => {
-      option.addEventListener("click", (e) => {
-        selectedSize = e.target.innerText.trim();
-        placeholder.innerText = selectedSize;
-      });
     });
   }
 
@@ -146,6 +132,19 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     });
     //uncomment
+    //get the picked color
+    document.querySelectorAll(".cbtn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        selectedColor = e.target.innerText.trim();
+      });
+    });
+    //get the picked size
+    dropdown.querySelectorAll(".dropdown-options li").forEach((option) => {
+      option.addEventListener("click", (e) => {
+        selectedSize = e.target.innerText.trim();
+        placeholder.innerText = selectedSize;
+      });
+    });
   }
 
   //get the variant ID based on the selected color and size
@@ -156,7 +155,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function addToCart() {
-
     console.log("color is "+selectedColor+" and size is "+selectedSize);
     
     if (!selectedColor || !selectedSize) {
