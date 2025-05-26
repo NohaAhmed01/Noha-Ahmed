@@ -96,6 +96,13 @@ header .brandFunction .words p {
   padding-bottom: 50px;
   color: #000;
 }
+header .brandFunction .words .small-screen{
+  font-weight: 400;
+  font-size: 16px;
+  padding-bottom: 50px;
+  color: #000;
+  display: none;
+}
 header .brandFunction .words button {
   font-weight: 400;
   font-size: 16px;
@@ -433,4 +440,39 @@ header .header-end p {
 .bottom-card button i {
   font-size: 20px;
   padding-left: 15px;
+}
+
+@media only screen and (max-width: 500px) {
+  header .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .nav .brandDescription {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    display: none;
+  }
+  header .nav button {
+    display: none;
+  }
+  header .bg-img {
+  display: none;
+}
+header .brandFunction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .brandFunction .words .title {
+  font-size: 30px;
+}
+header .brandFunction .words p {
+  display: none;
+}
+header .brandFunction .words .small-screen{
+  display: block;
+}
 }
