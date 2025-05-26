@@ -149,13 +149,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         placeholder.innerText = selectedSize;
       });
     });
+    console.log("color is "+selectedColor+" and size is "+selectedSize);
+
     return product.variants.find(
       (v) => v.option1 === selectedSize && v.option2 === selectedColor
     )?.id;
+    
   }
 
   function addToCart() {
-    console.log("color is "+selectedColor+" and size is "+selectedSize);
     
     if (!selectedColor || !selectedSize) {
       alert("Please select a size and color.");
