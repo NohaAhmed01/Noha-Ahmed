@@ -59,17 +59,26 @@ document.addEventListener("DOMContentLoaded", async () => {
         </button>
       </div>
           <div class="sizes">Size</div>
-    <div class="custom-dropdown">
+      <div class="custom-dropdown">
       <div class="selected">
         <span class="placeholder">Choose your size</span>
         <i class="fa-solid fa-chevron-down"></i>
       </div>
       <ul class="dropdown-options">
-        <li>XS</li>
-        <li>S</li>
-        <li>M</li>
-        <li>L</li>
+        <li>${product.options[0].values[0]}</li>
+        <li>${product.options[0].values[1]}</li>
+        <li>${product.options[0].values[2]}</li>
+        <li>${product.options[0].values[3]}</li>
       </ul>
+    </div>
+     <div class="bottom">
+      <div class="bottom-card">
+        <button
+          class="add-to-cart-btn"
+        >
+          <span>ADD TO CART</span><i class="fa-solid fa-arrow-right-long"></i>
+        </button>
+      </div>
     </div>
       `;
 
