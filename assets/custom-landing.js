@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   //get the variant ID based on the selected color and size
   function getVariantId(product, color, size) {
     return product.variants.find(
-      (v) => v.option1 === color && v.option2 === size
+      (v) => v.option1 === size && v.option2 === color
     )?.id;
   }
 
