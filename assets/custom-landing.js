@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const product = data.products[index];
       tcard.innerHTML = `
         <div class="close">
-      <i class="fa-solid fa-xmark"></i>
+      <img src="{{ 'icon-close.svg' | asset_url }}" alt="close">
     </div>
     <div class="top-card">
       <img src="${product.images[0].src}" alt="${product.title}" />

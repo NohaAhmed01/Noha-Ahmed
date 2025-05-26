@@ -57,9 +57,8 @@ header .nav button:hover {
   border: #000 1px solid;
 }
 header .nav button img {
-  font-weight: lighter;
-  width: 50%;
-  height: fit-content;
+    width: 20px;
+    height: 30%;
 }
 
 header .bg-img {
@@ -123,6 +122,10 @@ header .brandFunction .words button:hover::after {
 header .brandFunction .words button:hover {
   color: #000;
   border: #fff544 1px solid;
+}
+header .brandFunction .words button img{
+    width: 20px;
+    height: 30%;
 }
 header .brandFunction .images {
   width: 2600px;
@@ -261,8 +264,9 @@ header .header-end p {
   display: flex;
   justify-content: flex-end;
 }
-.product-details .fa-xmark {
-  font-size: 18px;
+.product-details .close img {
+    width: 20px;
+    height: 30%;
 }
 .product-details .card .top-card {
   height: 160px;
