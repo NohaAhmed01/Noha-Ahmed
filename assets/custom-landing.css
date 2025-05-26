@@ -529,4 +529,26 @@ header .header-end .small-screen {
   margin-bottom: 4px;
   position: relative;
 }
+.grid .clickable {
+  width: 15.71px;
+  height: 15.71px;
+}
+.product-details {
+  position: fixed;
+  top: 20%;
+  left: 15%;
+}
+.product-details .card .top-card .top-right .prod-title {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 100px;
+}
+.product-details .card .top-card .top-right .prod-price {
+  font-family: "Lustria", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+.product-details .card .top-card .top-right p {
+  font-size: 1.1rem;
+}
 }
