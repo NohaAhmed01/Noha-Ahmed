@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const product = data.products[index];
       tcard.innerHTML = `
         <div class="close">
-      <img class="fa-xmark" src="{'assets/icon-close-small.svg'}" alt="close">
+      <i class="fa-solid fa-xmark"></i>
     </div>
     <div class="top-card">
       <img src="${product.images[0].src}" alt="${product.title}" />
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       //add to cart button functionality
       const addToCartBtn = document.querySelector(".add-to-cart-btn");
-      addToCartBtn.addEventListener("click", addToCart);
+      addToCartBtn.addEventListener("click",addToCart);
     });
   });
 
@@ -147,41 +147,41 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     });
   }
-  //get the variant ID based on the selected color and size
-  function getVariantId(product, color, size) {
-    return product.variants.find(
-      (v) => v.option1 === size && v.option2 === color
-    )?.id;
-  }
+     //get the variant ID based on the selected color and size
+      function getVariantId(product, color, size) {
+        return product.variants.find(
+          (v) => v.option1 === size && v.option2 === color
+        )?.id;
+      }
 
-  function addToCart() {
+  function addToCart(){
     if (!selectedColor || !selectedSize) {
-      alert("Please select a size and color.");
-      return;
-    }
+          alert("Please select a size and color.");
+          return;
+        }
 
-    const variantId = getVariantId(product, selectedColor, selectedSize);
+        const variantId = getVariantId(product, selectedColor, selectedSize);
 
-    if (!variantId) {
-      alert("This combination is not available.");
-      return;
-    }
+        if (!variantId) {
+          alert("This combination is not available.");
+          return;
+        }
 
-    // Send to Shopify cart
-    fetch("/cart/add.js", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ quantity: 1, id: variantId }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        alert("Added to cart!");
-        // Optionally update UI cart count here
-      })
-      .catch((err) => {
-        console.error(err);
-        alert("There was an error adding to cart.");
-      });
+        // Send to Shopify cart
+        fetch("/cart/add.js", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ quantity: 1, id: variantId }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            alert("Added to cart!");
+            // Optionally update UI cart count here
+          })
+          .catch((err) => {
+            console.error(err);
+            alert("There was an error adding to cart.");
+          });
   }
   function close() {
     document.querySelector(".product-details").style.display = "none";

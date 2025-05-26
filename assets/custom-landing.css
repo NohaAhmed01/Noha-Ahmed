@@ -57,11 +57,15 @@ header .nav button:hover {
   border: #000 1px solid;
 }
 header .nav button img {
-    width: 20px;
-    height: 30%;
-    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(149deg) brightness(100%) contrast(100%);
+  width: 20px;
+  height: 30%;
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(149deg) brightness(100%)
+    contrast(100%);
 }
-
+header .nav button:hover img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(329deg)
+    brightness(105%) contrast(101%);
+}
 header .bg-img {
   height: 390px;
   width: 100%;
@@ -124,10 +128,15 @@ header .brandFunction .words button:hover {
   color: #000;
   border: #fff544 1px solid;
 }
-header .brandFunction .words button img{
-    width: 20px;
-    height: 30%;
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(329deg) brightness(105%) contrast(101%);
+header .brandFunction .words button img {
+  width: 20px;
+  height: 30%;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(329deg)
+    brightness(105%) contrast(101%);
+}
+header .brandFunction .words button:hover img {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(149deg) brightness(100%)
+    contrast(100%);
 }
 header .brandFunction .images {
   width: 2600px;
@@ -267,8 +276,8 @@ header .header-end p {
   justify-content: flex-end;
 }
 .product-details .close img {
-    width: 20px;
-    height: 30%;
+  width: 20px;
+  height: 30%;
 }
 .product-details .card .top-card {
   height: 160px;
@@ -329,9 +338,9 @@ header .header-end p {
   color: #fff;
   background-color: #000;
 }
-.middle-card .color-btns .cbtn.active{
-    color: #fff;
-    background-color: #000 !important;
+.middle-card .color-btns .cbtn.active {
+  color: #fff;
+  background-color: #000 !important;
 }
 
 .middle-card .sizes {
@@ -409,19 +418,19 @@ header .header-end p {
   display: block;
 }
 
-.bottom-card{
-    margin-top: 20px;
+.bottom-card {
+  margin-top: 20px;
 }
-.bottom-card button{
-    width: 100%;
-    height: 45px;
-    font-family: "Jost",sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    background-color: #000;
-    color: #fff;
+.bottom-card button {
+  width: 100%;
+  height: 45px;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
 }
-.bottom-card button i{
-    font-size: 20px;
-    padding-left: 15px;
+.bottom-card button i {
+  font-size: 20px;
+  padding-left: 15px;
 }
