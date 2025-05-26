@@ -101,8 +101,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       // Remove 'active' from all buttons
       const allBtns = tcard.querySelectorAll(".cbtn");
-      allBtns.forEach((btn) => btn.classList.remove("active"));
-
+      allBtns.forEach((btn) => {
+        btn.classList.remove("active"); 
+        btn.addEventListener("click", (e) => {
+          selectedColor = e.target.innerText.trim();
+        });
+      });
+      //get the picked color
+      // document.querySelectorAll(".cbtn").forEach((btn) => {
+       
+      // });
       // Add 'active' to the clicked one
       clickedBtn.classList.add("active");
     });
@@ -132,12 +140,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     });
     //uncomment
-    //get the picked color
-    document.querySelectorAll(".cbtn").forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        selectedColor = e.target.innerText.trim();
-      });
-    });
+
     //get the picked size
     dropdown.querySelectorAll(".dropdown-options li").forEach((option) => {
       option.addEventListener("click", (e) => {
@@ -155,8 +158,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function addToCart() {
-    console.log("color is "+selectedColor+" and size is "+selectedSize);
-    
+    console.log("color is " + selectedColor + " and size is " + selectedSize);
+
     if (!selectedColor || !selectedSize) {
       alert("Please select a size and color.");
       return;
