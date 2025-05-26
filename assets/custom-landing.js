@@ -155,13 +155,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   //get the variant ID based on the selected color and size
-  function getVariantId(product) {
+  function getVariantId(product, color, size) {
     return product.variants.find(
-      (v) => v.option1 === selectedSize && v.option2 === selectedColor
+      (v) => v.option1 === color && v.option2 === size
     )?.id;
   }
 
-  function addToCart(product) {
+  function addToCart(product, color, size) {
     console.log("color is "+selectedColor+" and size is "+selectedSize);
     
     if (!selectedColor || !selectedSize) {
@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
-    const variantId = getVariantId(product);
+    const variantId = getVariantId(product, color, size);
 
     if (!variantId) {
       alert("This combination is not available.");
