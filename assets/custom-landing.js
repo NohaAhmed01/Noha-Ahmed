@@ -136,7 +136,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   //get the variant ID based on the selected color and size
   function getVariantId(product) {
-    //get the picked color
+    return product.variants.find(
+      (v) => v.option1 === selectedSize && v.option2 === selectedColor
+    )?.id;
+  }
+
+  function addToCart() {
+     //get the picked color
     document.querySelectorAll(".cbtn").forEach((btn) => {
       btn.addEventListener("click", (e) => {
         selectedColor = e.target.innerText.trim();
@@ -150,14 +156,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     });
     console.log("color is "+selectedColor+" and size is "+selectedSize);
-
-    return product.variants.find(
-      (v) => v.option1 === selectedSize && v.option2 === selectedColor
-    )?.id;
-    
-  }
-
-  function addToCart() {
     
     if (!selectedColor || !selectedSize) {
       alert("Please select a size and color.");
