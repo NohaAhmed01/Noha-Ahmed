@@ -486,7 +486,7 @@ header .brandFunction .words button {
   width: 193px;
   height: 45px;
   position: relative;
-  bottom: 100px;
+  top: 150px;
   z-index: 0;
   overflow: hidden;
 }
@@ -507,5 +507,26 @@ header .header-end p {
 }
 header .header-end .small-screen {
  display: block;
+}
+.grid {
+  padding: 20px 40px;
+}
+.grid #grid-Title {
+  text-align: center;
+  font-size: 24px;
+  padding: 5px 0px;
+}
+.grid .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 342px;
+  flex-wrap: wrap;
+}
+.grid .row .col {
+  width: 169px;
+  height: 186.42px;
+  margin-bottom: 7px;
+  position: relative;
 }
 }
