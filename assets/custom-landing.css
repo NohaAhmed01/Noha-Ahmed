@@ -56,9 +56,10 @@ header .nav button:hover {
   color: white;
   border: #000 1px solid;
 }
-header i {
+header .nav button img {
   font-weight: lighter;
-  font-size: larger;
+  width: 50%;
+  height: fit-content;
 }
 
 header .bg-img {
