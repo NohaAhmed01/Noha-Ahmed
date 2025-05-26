@@ -126,6 +126,7 @@ header .brandFunction .words button:hover {
 header .brandFunction .words button img{
     width: 20px;
     height: 30%;
+    color: #fff;
 }
 header .brandFunction .images {
   width: 2600px;
