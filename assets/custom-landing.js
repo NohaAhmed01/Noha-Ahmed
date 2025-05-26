@@ -86,31 +86,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   });
 
-function sizesControl(){
-const dropdown = document.querySelector(".custom-dropdown");
-  const selected = dropdown.querySelector(".selected");
-  const placeholder = dropdown.querySelector(".placeholder");
-  const options = dropdown.querySelectorAll(".dropdown-options li");
-
-  selected.addEventListener("click", () => {
-    dropdown.classList.toggle("open");
-  });
-
-  options.forEach((option) => {
-    option.addEventListener("click", () => {
-      placeholder.textContent = option.textContent;
-      dropdown.classList.remove("open");
-    });
-  });
-
-  // Close dropdown if clicked outside
-  document.addEventListener("click", (e) => {
-    if (!dropdown.contains(e.target)) {
-      dropdown.classList.remove("open");
-    }
-  });
-
-}
   
 
 
@@ -136,6 +111,7 @@ const dropdown = document.querySelector(".custom-dropdown");
 
   if (tcard) {
     tcard.addEventListener("click", (event) => {
+       sizesControl();
       const clickedBtn = event.target.closest(".cbtn");
       if (!clickedBtn) return; // clicked outside a color button
 
@@ -148,7 +124,7 @@ const dropdown = document.querySelector(".custom-dropdown");
     });
 
 
-    sizesControl();
+   
 
 
 
@@ -169,7 +145,31 @@ const dropdown = document.querySelector(".custom-dropdown");
 
 
 
+function sizesControl(){
+const dropdown = document.querySelector(".custom-dropdown");
+  const selected = dropdown.querySelector(".selected");
+  const placeholder = dropdown.querySelector(".placeholder");
+  const options = dropdown.querySelectorAll(".dropdown-options li");
 
+  selected.addEventListener("click", () => {
+    dropdown.classList.toggle("open");
+  });
+
+  options.forEach((option) => {
+    option.addEventListener("click", () => {
+      placeholder.textContent = option.textContent;
+      dropdown.classList.remove("open");
+    });
+  });
+
+  // Close dropdown if clicked outside
+  document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove("open");
+    }
+  });
+
+}
 
 
 
