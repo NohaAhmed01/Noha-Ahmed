@@ -155,6 +155,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function addToCart() {
+    console.log("color is "+selectedColor+" and size is "+selectedSize);
+    
     if (!selectedColor || !selectedSize) {
       alert("Please select a size and color.");
       return;
