@@ -486,6 +486,7 @@ header .brandFunction .words button {
   width: 193px;
   height: 45px;
   position: relative;
+  bottom: 100px;
   z-index: 0;
   overflow: hidden;
 }
@@ -503,5 +504,8 @@ header .header-end {
 }
 header .header-end p {
  display: none;
+}
+header .header-end .small-screen {
+ display: block;
 }
 }
