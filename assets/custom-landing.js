@@ -88,13 +88,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       //add to cart button functionality
       const addToCartBtn = document.querySelector(".add-to-cart-btn");
-      addToCartBtn.addEventListener("click",addToCart);
+      addToCartBtn.addEventListener("click", addToCart);
     });
   });
 
   if (tcard) {
     tcard.addEventListener("click", (event) => {
       sizesControl();
+
       const clickedBtn = event.target.closest(".cbtn");
       if (!clickedBtn) return; // clicked outside a color button
 
@@ -104,14 +105,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       // Add 'active' to the clicked one
       clickedBtn.classList.add("active");
-    });
-
-    //uncomment
-    //get the picked color
-    document.querySelectorAll(".cbtn").forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        selectedColor = e.target.innerText.trim();
-      });
     });
   }
 
@@ -139,49 +132,56 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     });
     //uncomment
+  }
+
+  //get the variant ID based on the selected color and size
+  function getVariantId(product, color, size) {
+    //get the picked color
+    document.querySelectorAll(".cbtn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        selectedColor = e.target.innerText.trim();
+      });
+    });
     //get the picked size
-    options.forEach((option) => {
+    dropdown.querySelectorAll(".dropdown-options li").forEach((option) => {
       option.addEventListener("click", (e) => {
         selectedSize = e.target.innerText.trim();
         placeholder.innerText = selectedSize;
       });
     });
+    return product.variants.find(
+      (v) => v.option1 === size && v.option2 === color
+    )?.id;
   }
-     //get the variant ID based on the selected color and size
-      function getVariantId(product, color, size) {
-        return product.variants.find(
-          (v) => v.option1 === size && v.option2 === color
-        )?.id;
-      }
 
-  function addToCart(){
+  function addToCart() {
     if (!selectedColor || !selectedSize) {
-          alert("Please select a size and color.");
-          return;
-        }
+      alert("Please select a size and color.");
+      return;
+    }
 
-        const variantId = getVariantId(product, selectedColor, selectedSize);
+    const variantId = getVariantId(product, selectedColor, selectedSize);
 
-        if (!variantId) {
-          alert("This combination is not available.");
-          return;
-        }
+    if (!variantId) {
+      alert("This combination is not available.");
+      return;
+    }
 
-        // Send to Shopify cart
-        fetch("/cart/add.js", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ quantity: 1, id: variantId }),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            alert("Added to cart!");
-            // Optionally update UI cart count here
-          })
-          .catch((err) => {
-            console.error(err);
-            alert("There was an error adding to cart.");
-          });
+    // Send to Shopify cart
+    fetch("/cart/add.js", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ quantity: 1, id: variantId }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert("Added to cart!");
+        // Optionally update UI cart count here
+      })
+      .catch((err) => {
+        console.error(err);
+        alert("There was an error adding to cart.");
+      });
   }
   function close() {
     document.querySelector(".product-details").style.display = "none";
