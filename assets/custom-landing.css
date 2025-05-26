@@ -466,6 +466,12 @@ header .brandFunction {
   justify-content: center;
   align-items: center;
 }
+header .brandFunction .words {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 header .brandFunction .words .title {
   font-size: 30px;
 }
